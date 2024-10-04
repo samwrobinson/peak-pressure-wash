@@ -1,16 +1,16 @@
 module.exports = {
     "name": "Peak Pressure Wash",
-    "email": "help@codestitch.app",
-    "phoneForTel": "555-779-4407",
-    "phoneFormatted": "(555) 779-4407",
+    "email": "cameronshatswell@outlook.com",
+    "phoneForTel": "901-652-3925",
+    "phoneFormatted": "(901) 652-3925",
     "address": {
-        "lineOne": "First Address Line",
+        "lineOne": "3275 Brownlee Rd",
         "lineTwo": "Second Address Line",
-        "city": "Denver",
-        "state": "CO",
-        "zip": "80206",
-        "country": "US",
-        "mapLink": "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6"
+        "city": "Senatobia",
+        "state": "MS",
+        "zip": "38668",
+        "country": "Mid-South, USA",
+        "mapLink": "https://maps.app.goo.gl/YmrEkD8Lcor9HFwu9"
     },
     "socials": {
         "facebook": "https://www.facebook.com/",
