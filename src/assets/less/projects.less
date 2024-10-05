@@ -103,7 +103,8 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #RPsbs-313,
-    #RPsbsr-313 {
+    #RPsbsr-313,
+    #RPsbs-314 {
         padding: var(--sectionPadding);
 
         .cs-container {
@@ -143,10 +144,10 @@
             font-weight: 700;
             text-align: center;
             margin: 0;
-            color: #fff;
+            color: var(--primaryLight);
             min-width: (150/16rem);
             padding: 0 (24/16rem);
-            background-color: var(--primary);
+            background-color: var(--button-color);
             border-radius: (4/16rem);
             display: inline-block;
             position: relative;
@@ -159,7 +160,7 @@
                 position: absolute;
                 height: 100%;
                 width: 0%;
-                background: #000;
+                background: var(--primaryLight);
                 opacity: 1;
                 top: 0;
                 left: 0;
@@ -173,6 +174,11 @@
                     width: 100%;
                 }
             }
+        }
+
+        .cs-button-solid:hover {
+            color: var(--button-color);
+            transition: color 200ms ease;
         }
 
         .cs-quote {
@@ -248,7 +254,7 @@
         }
 
         .cs-picture1 {
-            width: (522/16em);
+            width: (581/16em);
             height: (581/16em);
             left: 0;
             top: 0;
@@ -264,13 +270,84 @@
             right: 0;
             bottom: 0;
         }
+        .cs-accent {
+            color: var(--primary);
+        }
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            text-align: inherit;
+            margin: 0 0 1rem 0;
+            color: var(--headerColor);
+            font-family: 'Montserrat', sans-serif;
+        }
+        h2 {
+            margin-top: 1rem;
+        }
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        h4,
+        h5,
+        h6 {
+            font-size: 1.25rem;
+        }
+        p {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            text-align: inherit;
+            width: 100%;
+            margin: 0 0 1rem 0;
+            color: var(--bodyTextColor);
+        }
+        p:last-of-type {
+            margin-bottom: 2rem;
+        }
+        p a {
+            font-size: inherit;
+            line-height: inherit;
+            text-decoration: underline;
+            color: var(--primary);
+        }
+        ol,
+        ul {
+            padding-left: 1.5rem;
+            margin: 0 0 2rem 0;
+            color: var(--bodyTextColor);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        ul li {
+            list-style: none;
+            color: inherit;
+            position: relative;
+        }
+        ul li:before {
+            /* custom list bullet */
+            content: "";
+            width: 3px;
+            height: 3px;
+            background: currentColor;
+            opacity: 1;
+            border-radius: 50%;
+            position: absolute;
+            display: block;
+            top: 0.625rem;
+            left: -0.75rem;
+        }
     }
 }
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #RPsbs-313,
-    #RPsbsr-313 {
+    #RPsbsr-313, 
+    #RPsbs-314 {
         .cs-container {
             flex-flow: row;
             justify-content: space-between;
@@ -318,6 +395,214 @@
         .cs-image-group {
             /* sends it to the right in the 2nd position */
             order: 2;
+        }
+    }
+}
+
+ /*-- -------------------------- -->
+<---   Side By Side Reverse     -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+
+    #sbsr-1363 {
+        padding: var(--sectionPadding);
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            text-align: left;
+            width: 100%;
+            max-width: (542/16rem);
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: 700;
+            text-align: inherit;
+            margin: 0 0 1rem 0;
+            color: var(--headerColor);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h2 {
+            margin-top: 1rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+
+        h4,
+        h5,
+        h6 {
+            font-size: 1.25rem;
+        }
+
+        p {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            text-align: inherit;
+            width: 100%;
+            margin: 0 0 1rem 0;
+            color: var(--bodyTextColor);
+        }
+
+        p:last-of-type {
+            margin-bottom: 2rem;
+        }
+
+        p a {
+            font-size: inherit;
+            line-height: inherit;
+            text-decoration: underline;
+            color: var(--primary);
+        }
+
+        ol,
+        ul {
+            padding-left: 1.5rem;
+            margin: 0 0 2rem 0;
+            color: var(--bodyTextColor);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        ul li {
+            list-style: none;
+            color: inherit;
+            position: relative;
+        }
+
+        ul li:before {
+            /* custom list bullet */
+            content: "";
+            width: 3px;
+            height: 3px;
+            background: currentColor;
+            opacity: 1;
+            border-radius: 50%;
+            position: absolute;
+            display: block;
+            top: 0.625rem;
+            left: -0.75rem;
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            color: var(--primaryLight);
+            min-width: (150/16rem);
+            padding: 0 (24/16rem);
+            background-color: var(--button-color);
+            border-radius: (4/16rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: var(--primaryLight);
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: (4/16rem);
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-button-solid:hover {
+            color: var(--button-color);
+            transition: color 200ms ease;
+        }
+
+        .cs-image-group {
+            width: 100%;
+            max-width: (586/16rem);
+            height: (520/16rem);
+            border-radius: clamp(2rem, 4vw, 3rem);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                display: block;
+            }
+        }
+    }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #sbsr-1363 {
+        .cs-container {
+            max-width: (1280/16rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+        }
+
+        .cs-image-group {
+            height: auto;
+            order: 2;
+        }
+    }
+}
+
+/* Large Desktop 1600px */
+@media only screen and (min-width: 100rem) {
+    #sbsr-1363 {
+        .cs-bubbles {
+            margin-right: (750/16rem);
+            left: auto;
+            right: 50%;
         }
     }
 }
