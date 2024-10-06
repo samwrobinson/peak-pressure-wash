@@ -246,6 +246,8 @@
   #contact-1403 .cs-form {
     width: 100%;
     max-width: 39.375rem;
+    max-height: 40rem;
+    overflow: scroll;
     /* -30px to -100px */
     margin-bottom: calc(clamp(1.875rem, 7vw, 6.25rem)*-1);
     /* 24px - 48px top and bottom */
@@ -307,7 +309,7 @@
     font-family: inherit;
   }
   #contact-1403 .cs-button-solid {
-    font-size: 1rem;
+    font-size: 0.625rem;
     line-height: 3.5rem;
     text-decoration: none;
     font-weight: 700;
@@ -358,14 +360,22 @@
     max-width: 80rem;
     flex-direction: row;
     justify-content: space-between;
+    padding-bottom: 60px;
   }
   #contact-1403 .cs-content {
     width: 47%;
     /* prevents flexbox from squishing it */
     flex: none;
   }
+  #contact-1403 .cs-button-solid {
+    font-size: 1rem;
+  }
   #contact-1403 .cs-submit {
     width: auto;
+  }
+  #contact-1403 .cs-form {
+    max-height: 32rem;
+    overflow: scroll;
   }
 }
 /* Desktop - 1024px */

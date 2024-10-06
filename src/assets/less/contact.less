@@ -309,6 +309,8 @@
         .cs-form {
             width: 100%;
             max-width: (630/16rem);
+            max-height: 40rem;
+            overflow: scroll;
             /* -30px to -100px */
             margin-bottom: ~"calc(clamp(1.875rem, 7vw, 6.25rem)*-1)";
             /* 24px - 48px top and bottom */
@@ -375,7 +377,7 @@
         }
 
         .cs-button-solid {
-            font-size: (16/16rem);
+            font-size: (10/16rem);
             line-height: (56/16rem);
             text-decoration: none;
             font-weight: 700;
@@ -433,6 +435,7 @@
             max-width: (1280/16rem);
             flex-direction: row;
             justify-content: space-between;
+            padding-bottom: 60px;
         }
 
         .cs-content {
@@ -441,8 +444,17 @@
             flex: none;
         }
 
+        .cs-button-solid {
+            font-size: (16/16rem);
+        }
+
         .cs-submit {
             width: auto;
+        }
+
+        .cs-form {
+            max-height: 32rem;
+            overflow: scroll;
         }
     }
 }
