@@ -1127,9 +1127,3 @@ html {
     display: inline-block;
   }
 }
-/* Dark Mode */
-@media only screen and (min-width: 0rem) {
-  body.dark-mode #footer {
-    background: #061623;
-  }
-}
