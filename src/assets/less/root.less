@@ -298,6 +298,10 @@
     }
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 /* Reset Margins */
 @media only screen and (min-width: 1024px) {
     body,
@@ -702,40 +706,37 @@ html {
         }
 
         .cs-li-link {
-            /* 14px - 16px */
-            font-size: clamp(0.875rem, 1vw, 1rem);
-            line-height: 1.5em;
-            text-decoration: none;
-            margin: 0;
-            color: var(--bodyTextColor);
-            display: block;
-            position: relative;
-            &:hover {
-                &:before {
-                    width: 100%;
-                }
-            }
+    /* Common styles for all nav links */
+    font-size: clamp(0.875rem, 1vw, 1rem);
+    line-height: 1.5em;
+    text-decoration: none;
+    margin: 0;
+    color: var(--headerColor);
+    display: inline-block;
+    position: relative;
+    
+    /* Hover effect for the links */
+    &:hover::before {
+        width: 100%;
+    }
+    
+    /* Underline for the active link */
+    &.cs-active::before {
+        width: 100%; /* Ensure the underline is visible for the active link */
+    }
 
-            &.cs-active {
-                &:before {
-                    width: 100%;
-                }
-            }
-
-            &:before {
-                /* active state underline */
-                content: "";
-                width: 0%;
-                height: 2px;
-                background: var(--primary);
-                opacity: 1;
-                position: absolute;
-                display: block;
-                bottom: (0/16rem);
-                left: 0;
-                transition: width 0.3s;
-            }
-        }
+    /* Styling for the underline */
+    &::before {
+        content: "";
+        width: 0;
+        height: 2px; /* Adjust thickness of the underline */
+        background: var(--primary); /* You can change this color to match your theme */
+        position: absolute;
+        bottom: -2px; /* Adjust the position of the underline */
+        left: 0;
+        transition: width 0.3s ease-in-out;
+    }
+}
 
         .cs-button-solid {
             font-size: (16/16rem);

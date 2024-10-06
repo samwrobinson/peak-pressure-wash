@@ -119,6 +119,45 @@
   #sbs .cs-button-solid {
     margin-top: 2rem;
   }
+  #sbs .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: var(--primaryLight);
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--button-color);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #sbs .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: var(--primaryLight);
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #sbs .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #sbs .cs-button-solid:hover {
+    color: var(--button-color);
+    transition: color 200ms ease;
+  }
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
@@ -165,5 +204,483 @@
   }
   body.dark-mode #sbs .cs-quote-icon {
     opacity: 0.2;
+  }
+}
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #reviews-608 {
+    padding: var(--sectionPadding);
+  }
+  #reviews-608 .cs-container {
+    width: 100%;
+    /* changes to 1440px at tablet */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+  }
+  #reviews-608 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+  #reviews-608 .cs-title {
+    max-width: 20ch;
+  }
+  #reviews-608 .cs-card-group {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  #reviews-608 .cs-item {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    /* 32px - 48px top & bottom */
+    /* 16px - 32px left & right */
+    padding: clamp(2rem, 7vw, 3rem) clamp(1rem, 4vw, 2rem);
+    /* makes padding not affect height and width */
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 20px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.16);
+    transform: translateY(0);
+    transition: transform 250ms ease-in-out;
+  }
+  #reviews-608 .cs-item:hover {
+    transform: translateY(-50px);
+  }
+  #reviews-608 .cs-icon {
+    /* 30px - 40px */
+    width: clamp(1.875rem, 4vw, 2.5rem);
+    height: auto;
+    margin: 0 0 2rem 0;
+    display: block;
+  }
+  #reviews-608 .cs-h3 {
+    /* 20px - 25px */
+    font-size: clamp(1.25rem, 4vw, 1.5625rem);
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: 0 0 1.5rem 0;
+    color: var(--headerColor);
+    font-family: 'Montserrat', sans-serif;
+  }
+  #reviews-608 .cs-item-text {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 4vw, 1rem);
+    line-height: 1.5em;
+    max-width: 24.25rem;
+    margin: 0 0 3rem 0;
+    color: var(--bodyTextColor);
+    font-family: 'Nunito', sans-serif;
+  }
+  #reviews-608 .cs-name {
+    font-size: 1.25rem;
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin: auto 0 0 0;
+    color: var(--headerColor);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+  }
+  #reviews-608 .cs-name:before {
+    content: "";
+    width: 0.5rem;
+    height: 1px;
+    background: currentColor;
+    display: block;
+    position: relative;
+  }
+  #reviews-608 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    margin-top: 20px;
+    color: var(--primaryLight);
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--button-color);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #reviews-608 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: var(--primaryLight);
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #reviews-608 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #reviews-608 .cs-button-solid:hover {
+    color: var(--button-color);
+    transition: color 200ms ease;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #reviews-608 .cs-container {
+    max-width: 90rem;
+    flex-direction: column;
+  }
+  #reviews-608 .cs-card-group {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  #reviews-608 .cs-item {
+    width: 48.5%;
+  }
+}
+/* Small Desktop - 1300px */
+@media only screen and (min-width: 81.25rem) {
+  #reviews-608 .cs-container {
+    max-width: 90rem;
+    flex-direction: row-reverse;
+  }
+  #reviews-608 .cs-card-group {
+    align-items: stretch;
+    justify-content: center;
+  }
+  #reviews-608 .cs-item {
+    width: clamp(35%, 30vw, 45%);
+  }
+}
+/*-- -------------------------- -->
+<---          Contact           -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #contact-321 {
+    padding: var(--sectionPadding);
+    position: relative;
+    z-index: 1;
+  }
+  #contact-321 .cs-container {
+    width: 100%;
+    /* changes to 1280px at desktop */
+    max-width: 34.375rem;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3.25rem;
+  }
+  #contact-321 p {
+    font-family: 'Nunito', sans-serif;
+  }
+  #contact-321 .cs-content {
+    text-align: left;
+  }
+  #contact-321 .cs-topper {
+    color: var(--secondary);
+  }
+  #contact-321 .cs-title {
+    color: var(--bodyTextColorWhite);
+  }
+  #contact-321 .cs-form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  #contact-321 .cs-label {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  #contact-321 .cs-input {
+    font-size: 1rem;
+    width: 100%;
+    height: 3.5rem;
+    padding: 0;
+    padding-left: 1.5rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(15px);
+    border: none;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+  }
+  #contact-321 .cs-input::placeholder {
+    color: #f7f7f7;
+    opacity: 0.5;
+  }
+  #contact-321 .cs-textarea {
+    min-height: 7.5rem;
+    padding-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-family: inherit;
+  }
+  #contact-321 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+  #contact-321 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+  #contact-321 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #contact-321 .cs-submit {
+    width: 17.6875rem;
+    text-transform: uppercase;
+    color: var(--headerColor);
+    background-color: var(--secondary);
+    border: none;
+    transition: color 0.3s;
+  }
+  #contact-321 .cs-submit:hover {
+    cursor: pointer;
+    color: #fff;
+  }
+  #contact-321 .cs-right {
+    width: 100%;
+    /* 16px - 24px */
+    padding: clamp(1rem, 3.5vw, 1.5rem);
+    border-radius: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.12);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    display: flex;
+    /* prevents padding from adding to height and width */
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    /* 24px - 32px */
+    gap: clamp(1.5rem, 4vw, 2rem);
+  }
+  #contact-321 .cs-map {
+    width: 100%;
+    /* 300px - 425px */
+    height: clamp(18.75rem, 63.4vw, 26.5625rem);
+    border-radius: 1.5rem;
+    /* clips the corners of the img tag */
+    overflow: hidden;
+    position: relative;
+    display: block;
+  }
+  #contact-321 .cs-map:before {
+    content: "";
+    position: absolute;
+    display: block;
+    /* 32px - 48px */
+    width: clamp(2rem, 4vw, 3rem);
+    height: clamp(2rem, 4vw, 3rem);
+    background: url("https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/pin-red.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 1;
+    /* 148px - 220px */
+    top: clamp(9.25rem, 30.7vw, 13.75rem);
+    /* push to the center line of the div */
+    left: 50%;
+    /* push X amount of pixels from it's current position off the center line */
+    margin-left: 0.625rem;
+    z-index: 10;
+  }
+  #contact-321 .cs-map img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  #contact-321 .cs-contact-group {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  #contact-321 .cs-item {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  #contact-321 .cs-header {
+    font-size: 1.25rem;
+    line-height: 1.2em;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: var(--secondary);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  #contact-321 .cs-link {
+    /* 14px - 16px */
+    font-size: clamp(0.875rem, 1.5vw, 1rem);
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5em;
+    text-decoration: none;
+    color: var(--bodyTextColorWhite);
+    transition: color 0.3s;
+  }
+  #contact-321 .cs-link:hover {
+    color: var(--secondary);
+  }
+  #contact-321 .cs-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    z-index: -1;
+  }
+  #contact-321 .cs-background:before {
+    /* top right box */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(42, 65, 109, 0.92) 0%, rgba(42, 65, 109, 0.92) 100%), lightgray -6.06px -430.237px / 100% 211.946% no-repeat;
+    opacity: 0.92;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  #contact-321 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+/* Tablet - 650px */
+@media only screen and (min-width: 40.625rem) {
+  #contact-321 .cs-contact-group {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  #contact-321 .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 3.25rem;
+  }
+  #contact-321 .cs-content {
+    max-width: 32.625rem;
+  }
+  #contact-321 .cs-title,
+  #contact-321 .cs-topper {
+    text-align: left;
+    margin-left: 0;
+  }
+  #contact-321 .cs-title {
+    max-width: 32.625rem;
+  }
+  #contact-321 .cs-email,
+  #contact-321 .cs-phone {
+    width: 48%;
+  }
+  #contact-321 .cs-button-solid {
+    margin-left: 0;
+  }
+  #contact-321 .cs-right {
+    width: 51.6%;
+    max-width: 41.125rem;
+    /* prevent flexbox from squishing it */
+    flex: none;
+  }
+}
+/* Desktop - 1300px - Parallax Effect */
+@media only screen and (min-width: 81.25rem) {
+  #contact-321 {
+    background: url("https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/round-table.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* makes parallax effect */
+    background-attachment: fixed;
   }
 }

@@ -276,6 +276,9 @@
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
   }
 }
+html {
+  scroll-behavior: smooth;
+}
 /* Reset Margins */
 @media only screen and (min-width: 1024px) {
   body,
@@ -617,33 +620,37 @@ html {
     margin-left: auto;
   }
   #cs-navigation .cs-li-link {
-    /* 14px - 16px */
+    /* Common styles for all nav links */
     font-size: clamp(0.875rem, 1vw, 1rem);
     line-height: 1.5em;
     text-decoration: none;
     margin: 0;
-    color: var(--bodyTextColor);
-    display: block;
+    color: var(--headerColor);
+    display: inline-block;
     position: relative;
+    /* Hover effect for the links */
+    /* Underline for the active link */
+    /* Styling for the underline */
   }
-  #cs-navigation .cs-li-link:hover:before {
+  #cs-navigation .cs-li-link:hover::before {
     width: 100%;
   }
-  #cs-navigation .cs-li-link.cs-active:before {
+  #cs-navigation .cs-li-link.cs-active::before {
     width: 100%;
+    /* Ensure the underline is visible for the active link */
   }
-  #cs-navigation .cs-li-link:before {
-    /* active state underline */
+  #cs-navigation .cs-li-link::before {
     content: "";
-    width: 0%;
+    width: 0;
     height: 2px;
+    /* Adjust thickness of the underline */
     background: var(--primary);
-    opacity: 1;
+    /* You can change this color to match your theme */
     position: absolute;
-    display: block;
-    bottom: 0rem;
+    bottom: -2px;
+    /* Adjust the position of the underline */
     left: 0;
-    transition: width 0.3s;
+    transition: width 0.3s ease-in-out;
   }
   #cs-navigation .cs-button-solid {
     font-size: 1rem;

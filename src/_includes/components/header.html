@@ -21,32 +21,32 @@
         <div class="cs-ul-wrapper">
             <ul id="cs-expanded" class="cs-ul" aria-expanded="false">
                 <li class="cs-li">
-                    <a href="/index" class="cs-li-link cs-active">
+                    <a href="/index" class="cs-li-link {% if page.url == '/' %} cs-active {% endif %}">
                         Home
                     </a>
                 </li>
                 <li class="cs-li">
-                    <a href="/residential" class="cs-li-link">
+                    <a href="/residential" class="cs-li-link {% if page.url == '/residential/' %} cs-active {% endif %}">
                         Residential
                     </a>
                 </li>
                 <li class="cs-li">
-                    <a href="/commercial" class="cs-li-link">
+                    <a href="/commercial" class="cs-li-link {% if page.url == '/commercial/' %} cs-active {% endif %}">
                         Commercial
                     </a>
                 </li>
                 <li class="cs-li">
-                    <a href="" class="cs-li-link">
+                    <a href="/holiday" class="cs-li-link {% if page.url == '/holiday/' %} cs-active {% endif %}"">
                         Holiday Lighting
                     </a>
                 </li>
                 <li class="cs-li">
-                    <a href="" class="cs-li-link">
+                    <a href="/about" class="cs-li-link {% if page.url == '/about/' %} cs-active {% endif %}">
                         About Us
                     </a>
                 </li>
                 <li class="cs-li">
-                    <a href="" class="cs-li-link">
+                    <a href="/contact" class="cs-li-link {% if page.url == '/contact/' %} cs-active {% endif %}">
                         Contact
                     </a>
                 </li>

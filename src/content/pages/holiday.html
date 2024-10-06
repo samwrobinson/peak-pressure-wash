@@ -1,0 +1,123 @@
+---
+title: 'Holiday Lighting | Peak Pressure Wash, Mid-South, USA'
+description: 'Transform your home or business with festive holiday lighting from Peak Pressure Wash. Our professional installation services make your property shine bright for the season. Contact us today to schedule your holiday lighting setup!'
+preloadImg: '/assets/images/holiday-banner.webp'
+permalink: 'holiday/'
+eleventyNavigation:
+    key: Reviews
+    order: 400
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/reviews.css">
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-843">
+    <div class="cs-container">
+        <span class="cs-int-title">Christmas Lighting</span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background" aria-hidden="true">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/holiday-banner.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/holiday-banner.webp">
+        <img loading="lazy" decoding="async" src="/assets/images/holiday-banner.webp" alt="yoga" width="1280" height="568">
+    </picture>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+    </svg>
+</div>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="RPsbs-313">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <source media="(max-width: 600px)" srcset="/assets/images/holiday-1.webp">
+                <source media="(min-width: 601px)" srcset="/assets/images/holiday-1.webp">
+                <img loading="lazy" decoding="async" src="/assets/images/holiday-1.webp" alt="Residential driveway cleaning" width="522" height="581" aria-hidden="true">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <source media="(max-width: 600px)" srcset="/assets/images/holiday-2.webp">
+                <source media="(min-width: 601px)" srcset="/assets/images/holiday-2.webp">
+                <img loading="lazy" decoding="async" src="/assets/images/holiday-2.webp" alt="Peak Pressure Wash Holiday Lighting Installation" width="414" height="400" aria-hidden="true">
+            </picture>
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <h1 class="cs-title"><span class="cs-accent">Christmas Lighting</span> Installation</h2>
+            <h2>Make Your Property Sparkle This Christmas</h2>
+            <p>
+                The holidays are all about magic, joy, and a little extra sparkle. At Peak Pressure Wash, we bring that festive charm to your home or business with our professional holiday lighting services. From twinkling rooftop lights to bright tree wraps and enchanting displays, we take care of everything so you can sit back and enjoy the season.
+            </p>
+            <p>
+                No more struggling with tangled lights, broken bulbs, or climbing ladders in the cold—we’ve got you covered! Our team will design, install, and maintain a beautiful light display customized to your property, ensuring a warm and welcoming atmosphere that captures the true spirit of the holidays.
+            </p>
+            <h3>Why Choose Us for Holiday Lighting?</h3>
+            <h4>Stress-Free Installation</h4>
+            <p>
+                We handle everything from start to finish, so you don’t have to worry about a thing. Just tell us your vision, and we'll make it happen.
+            </p>
+            <h4>Custom Designs</h4>
+            <p>
+                Every property is unique, and so are our designs. Whether you’re aiming for classic elegance or a playful wonderland, we create the perfect display tailored to your style.
+            </p>
+            <h4>Safety First</h4>
+            <p>
+                Our team is trained to install lights safely and efficiently, ensuring that your property looks stunning without compromising on safety.
+            </p>
+            <h4>Full Service</h4>
+            <p>
+                We don’t just install—we’ll also take down and store your lights once the holidays are over, making the entire experience hassle-free.
+            </p>
+            <a href="/quote" class="cs-button-solid">Get a Quote!</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-1363">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-background">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="/assets/images/holiday-3.webp">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="/assets/images/holiday-3.webp">
+                <img loading="lazy" decoding="async" src="/assets/images/holiday-3.webp" alt="Peak Pressure Wash Holiday Lighting" width="605868" height="690">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <div class="cs-content">
+                <h3>Bring the Joy of the Christmas to Your Home or Business</h3>
+                <p>
+                    Whether you want to create a cozy glow for your family or attract more customers with a festive display, Peak Pressure Wash is here to help. We use high-quality, energy-efficient LED lights to make your property shine bright, creating memories that last long after the season ends.    
+                </p>
+                <p>
+                    Ready to transform your space into a winter wonderland? Contact us today to schedule your holiday lighting installation and let us bring some festive cheer to your property!
+                </p>
+                <a href="/quote" class="cs-button-solid">Get a Quote!</a>
+        </div>
+    </div>
+</section>
+
+    {% include 'components/cta.html' %}
+
+{% endblock %}

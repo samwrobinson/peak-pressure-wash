@@ -68,7 +68,7 @@
   }
   #hero-331 .cs-title {
     /* 39px - 61px */
-    font-size: clamp(2.4375rem, 6.4vw, 3.8125rem);
+    font-size: clamp(2.4375rem, 6.4vw, 3rem);
     font-weight: 900;
     line-height: 1.2em;
     text-align: left;
@@ -1217,6 +1217,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
+    font-family: 'Nunito', sans-serif;
   }
   #reviews-497 .cs-review-text {
     /* 16px - 20px */
