@@ -4,7 +4,7 @@ module.exports = {
     "phoneForTel": "901-652-3925",
     "phoneFormatted": "(901) 652-3925",
     "address": {
-        "lineOne": "3275 Brownlee Rd",
+        "lineOne": "Senatobia",
         "lineTwo": "Second Address Line",
         "city": "Senatobia",
         "state": "MS",
