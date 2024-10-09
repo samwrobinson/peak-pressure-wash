@@ -12,12 +12,20 @@
         <link rel="canonical" href="{{ client.domain }}{{ page.url }}">
 
         <!--Social Media Display-->
+        <!-- Open Graph Meta Tags -->
         <meta property="og:title" content="{{ title }}"/>
         <meta property="og:description" content="{{ description }}"/>
         <meta property="og:type" content="website"/>
         <meta property="og:url" content="{{ client.domain }}{{ page.url }}"/>
-        <meta property="og:image" content="/assets/images/social-media-image.png"/>
-        <meta property="og:image:secure_url" content="/assets/images/social-media-image.png"/>
+
+        <!-- Dynamically include Open Graph Image -->
+        {% if ogImage %}
+            <meta property="og:image" content="{{ ogImage }}"/>
+            <meta property="og:image:secure_url" content="{{ ogImage }}"/>
+        {% else %}
+            <meta property="og:image" content="/assets/images/default-social-image.webp"/> <!-- Fallback image -->
+            <meta property="og:image:secure_url" content="/assets/images/default-social-image.webp"/>
+        {% endif %}
 
         <!--Favicons-->
         <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/apple-touch-icon.png">
