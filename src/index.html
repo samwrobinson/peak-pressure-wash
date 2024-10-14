@@ -105,9 +105,9 @@ eleventyNavigation:
 
     <!-- Background Image -->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="/assets/images/landing-hero.webp">
-        <source media="(min-width: 601px)" srcset="/assets/images/hero-image-v2.webp">
-        <img decoding="async" src="/assets/images/landing-hero.webp" alt="Roof Pressure washing" width="2250" height="1500" aria-hidden="true">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-image.png" | resize({width: 375, height: 725}) | webp %}">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero-image.png" | resize({width: 1625, height: 1020}) | webp %}">
+        <img decoding="async" src="{% getUrl "/assets/images/hero-image.png" | resize({width: 1625, height: 1020}) | webp %}" alt="Roof Pressure washing" aria-hidden="true">
     </picture>
 </section>
 
@@ -169,9 +169,9 @@ eleventyNavigation:
                     <a href="/residential" class="cs-link">Read More</a>
                 </div>
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="assets/images/house-wash.webp">
-                    <source media="(min-width: 601px)" srcset="assets/images/siding-service.webp">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="assets/images/siding-service.webp" alt="Pressure washing house siding" width="345" height="428">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/siding-service.webp" | resize({width: 343, height: 250, position: "bottom"}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/siding-service.webp" | resize({width: 345, height: 428, position: "bottom"}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/siding-service.webp" | resize({width: 345, height: 428, position: "bottom"}) %}" alt="Pressure washing house siding">
                 </picture>
             </li>
             <li class="cs-item">
@@ -184,9 +184,9 @@ eleventyNavigation:
                     <a href="/residential" class="cs-link">Read More</a>
                 </div>
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="/assets/images/roof-wash.webp">
-                    <source media="(min-width: 601px)" srcset="/assets/images/roof-service.webp">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/roof-wash.webp" alt="Pressure washing a resdiential roof" width="345" height="428">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/roof-service.webp" | resize({width: 343, height: 250}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/roof-service.webp" | resize({width: 345, height: 428}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/roof-service.webp" | resize({width: 345, height: 428}) %}" alt="Pressure washing a resdiential roof">
                 </picture>
             </li>
             <li class="cs-item">
@@ -199,9 +199,9 @@ eleventyNavigation:
                     <a href="/commercial" class="cs-link">Read More</a>
                 </div>
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="/assets/images/concrete-surface.webp">
-                    <source media="(min-width: 601px)" srcset="/assets/images/surface-service.webp">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/concrete-surface.webp" alt="Pressure washing commercial parking lot" width="345" height="428">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/surface-service.webp" | resize({width: 343, height: 250}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/surface-service.webp" | resize({width: 345, height: 428}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/surface-service.webp" | resize({width: 345, height: 428}) %}" alt="Pressure washing commercial parking lot">
                 </picture>
             </li>
             <li class="cs-item">
@@ -214,9 +214,9 @@ eleventyNavigation:
                     <a href="/commercial" class="cs-link">Read More</a>
                 </div>
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="/assets/images/window-cleaning.webp">
-                    <source media="(min-width: 601px)" srcset="/assets/images/window-service.webp">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/window-cleaning.webp" alt="Cleaning storefront windows" width="345" height="428">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/window-service.webp" | resize({width: 343, height: 250}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/window-service.webp" | resize({width: 345, height: 428}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/window-service.webp" | resize({width: 345, height: 428}) %}" alt="Cleaning storefront windows">
                 </picture>
             </li>
         </ul>
@@ -247,10 +247,10 @@ eleventyNavigation:
             <li class="cs-item">
                 <picture class="cs-picture">
                     <!--Mobile Image-->
-                    <source media="(max-width: 600px)" srcset="/assets/images/cameron-family-m.webp">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cameron-family.jpeg" | resize({width: 343, height: 425}) | webp %}">
                     <!--Tablet and above Image-->
-                    <source media="(min-width: 601px)" srcset="/assets/images/cameron-family.webp">
-                    <img loading="lazy" decoding="async" src="/assets/images/cameron-family.webp" alt="Cameron Shatswell and his wife" width="305" height="407">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/cameron-family.jpeg" | resize({width: 608, height: 407, position: "attention"}) | webp %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/cameron-family.jpeg" | resize({width: 608, height: 407, position: "attention"}) | webp %}" alt="Cameron Shatswell and his wife">
                 </picture>
                 <div class="cs-info">
                     <span class="cs-name">Cameron Shatswell</span>
@@ -270,14 +270,14 @@ eleventyNavigation:
         <!-- Left Image Section -->
         <div class="cs-image-group">
             <picture class="cs-picture cs-picture1">
-                <source media="(max-width: 600px)" srcset="/assets/images/roof-before-m.webp">
-                <source media="(min-width: 601px)" srcset="/assets/images/roof-before-m.webp">
-                <img loading="lazy" decoding="async" src="/assets/images/roof-before-m.webp" alt="Dirty roof before pressure washing" width="522" height="581" aria-hidden="true">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/roof-before.jpeg" | resize({width: 282, height: 314}) | webp %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/roof-before.jpeg" | resize({width: 522, height: 581}) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/roof-before.jpeg" | resize({width: 522, height: 581}) | webp %}" alt="Dirty roof before pressure washing" aria-hidden="true">
             </picture>
             <picture class="cs-picture cs-picture2">
-                <source media="(max-width: 600px)" srcset="/assets/images/roof-after-m.webp">
-                <source media="(min-width: 601px)" srcset="/assets/images/roof-after.webp">
-                <img loading="lazy" decoding="async" src="/assets/images/roof-after.webp" alt="Clean roof after pressure washing" width="414" height="400" aria-hidden="true">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/roof-after.webp" | resize({width: 214, height: 206}) %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/roof-after.webp" | resize({width: 390, height: 376}) %}">
+                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/roof-after.webp" | resize({width: 390, height: 376}) %}" alt="Clean roof after pressure washing" aria-hidden="true">
             </picture>
         </div>
         <!-- Right Content Section-->
@@ -300,14 +300,14 @@ eleventyNavigation:
         <!-- Left Image Section -->
         <div class="cs-image-group">
             <picture class="cs-picture cs-picture1">
-                <source media="(max-width: 600px)" srcset="/assets/images/storefront-m.webp">
-                <source media="(min-width: 601px)" srcset="/assets/images/window-after.webp">
-                <img loading="lazy" decoding="async" src="/assets/images/window-after.webp" alt="Cleaning commercial storefront windows" width="522" height="581" aria-hidden="true">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/window-after.webp" | resize({width: 282, height: 314}) | webp %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/window-after.webp" | resize({width: 522, height: 581}) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/window-after.webp" | resize({width: 522, height: 581}) | webp %}" alt="Cleaning commercial storefront windows" aria-hidden="true">
             </picture>
             <picture class="cs-picture cs-picture2">
-                <source media="(max-width: 600px)" srcset="/assets/images/comm-windows-m.webp">
-                <source media="(min-width: 601px)" srcset="/assets/images/window-before.webp">
-                <img loading="lazy" decoding="async" src="/assets/images/window-before.webp" alt="Cleaning commercial storefront windows" width="414" height="400" aria-hidden="true">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/window-before.webp" | resize({width: 214, height: 206}) | webp %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/window-before.webp" | resize({width: 390, height: 376}) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/window-before.webp" | resize({width: 390, height: 376}) | webp %}" alt="Cleaning commercial storefront windows" width="414" height="400" aria-hidden="true">
             </picture>
         </div>
         <!-- Right Content Section-->
@@ -338,65 +338,65 @@ eleventyNavigation:
             <!-- Image 1 -->
             <li class="cs-item">
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="/assets/images/siding-before.webp">
-                    <source media="(min-width: 601px)" srcset="/assets/images/siding-before.webp">
-                    <img loading="lazy" decoding="async" src="/assets/images/siding-before.webp" alt="Dirty bricks before pressure washing" width="346" height="346">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/siding-before.webp" | resize({width: 343, height: 343}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/siding-before.webp" | resize({width: 305, height: 305}) %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/siding-before.webp" | resize({width: 305, height: 305}) %}" alt="Dirty bricks before pressure washing">
                 </picture>
             </li>
             <!-- Image 2 -->
             <li class="cs-item">
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="/assets/images/siding-after.webp">
-                    <source media="(min-width: 601px)" srcset="/assets/images/siding-after.webp">
-                    <img loading="lazy" decoding="async" src="/assets/images/siding-after.webp" alt="Clean bricks after pressure washing" width="346" height="346">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/siding-after.webp" | resize({width: 343, height: 343}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/siding-after.webp" | resize({width: 305, height: 305}) %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/siding-after.webp" | resize({width: 305, height: 305}) %}" alt="Clean bricks after pressure washing" width="346" height="346">
                 </picture>
             </li>
             <!-- Image 3 -->
             <li class="cs-item">
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="/assets/images/drive-before.webp">
-                    <source media="(min-width: 601px)" srcset="/assets/images/drive-before.webp">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/drive-before.webp" alt="Dirty driveway before pressure washing" width="346" height="346">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/drive-before.webp" | resize({width: 343, height: 343}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/drive-before.webp" | resize({width: 305, height: 305}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/drive-before.webp" | resize({width: 305, height: 305}) %}" alt="Dirty driveway before pressure washing">
                 </picture>
             </li>
             <!-- Image 4 -->
             <li class="cs-item">
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="/assets/images/drive-after.webp">
-                    <source media="(min-width: 601px)" srcset="/assets/images/drive-after.webp">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/drive-after.webp" alt="Clean driveway after pressure washing" width="346" height="346">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/drive-after.webp" | resize({width: 343, height: 343}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/drive-after.webp" | resize({width: 305, height: 305}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/drive-after.webp" | resize({width: 305, height: 305}) %}" alt="Clean driveway after pressure washing">
                 </picture>
             </li>
             <!-- Image 5 -->
             <li class="cs-item">
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="/assets/images/patio-before.webp">
-                    <source media="(min-width: 601px)" srcset="/assets/images/patio-before.webp">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/patio-before.webp" alt="Dirty patio before pressure washing" width="346" height="346">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/patio-before.webp" | resize({width: 343, height: 343}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/patio-before.webp" | resize({width: 305, height: 305}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/patio-before.webp" | resize({width: 305, height: 305}) %}" alt="Dirty patio before pressure washing" width="346" height="346">
                 </picture>
             </li>
             <!-- Image 6 -->
             <li class="cs-item">
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="/assets/images/patio-after.webp">
-                    <source media="(min-width: 601px)" srcset="/assets/images/patio-after.webp">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/patio-after.webp" alt="Clean patio before pressure washing" width="346" height="346">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/patio-after.webp" | resize({width: 343, height: 343}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/patio-after.webp" | resize({width: 305, height: 305}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/patio-after.webp" | resize({width: 305, height: 305}) %}" alt="Clean patio before pressure washing" width="346" height="346">
                 </picture>
             </li>
             <!-- Image 7 -->
             <li class="cs-item">
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="/assets/images/pergola-before.webp">
-                    <source media="(min-width: 601px)" srcset="/assets/images/pergola-before.webp">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/pergola-before.webp" alt="Dirty pergola before pressure washing" width="346" height="346">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/pergola-before.webp" | resize({width: 343, height: 343}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/pergola-before.webp" | resize({width: 305, height: 305}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/pergola-before.webp" | resize({width: 305, height: 305}) %}" alt="Dirty pergola before pressure washing">
                 </picture>
             </li>
             <!-- Image 8 -->
             <li class="cs-item">
                 <picture class="cs-picture">
-                    <source media="(max-width: 600px)" srcset="/assets/images/pergola-after.webp">
-                    <source media="(min-width: 601px)" srcset="/assets/images/pergola-after.webp">
-                    <img aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/pergola-after.webp" alt="Clean pergola after pressure washing" width="346" height="346">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/pergola-after.webp" | resize({width: 343, height: 343}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/pergola-after.webp" | resize({width: 305, height: 305}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/pergola-after.webp" | resize({width: 305, height: 305}) %}" alt="Clean pergola after pressure washing">
                 </picture>
             </li>
         </ul>
