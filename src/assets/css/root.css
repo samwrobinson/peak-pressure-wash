@@ -551,6 +551,38 @@ html {
   #cs-navigation .cs-li-link.cs-active:before {
     display: block;
   }
+  #cs-navigation .light-sale {
+    display: flex;
+    background-color: #69B12B;
+    justify-content: center;
+    align-items: center ;
+    min-width: 100%;
+    padding: 10px 20px;
+    margin: 10px 0 25px 0;
+    position: absolute;
+    right: 0;
+  }
+  #cs-navigation .cs-button-solid:hover {
+    color: var(--button-color);
+    transition: color 200ms ease;
+  }
+  #cs-navigation #sale {
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+    color: #fff;
+    /* Text color */
+    font-weight: bold;
+    /* Make the text stand out */
+    text-align: center;
+  }
+  #cs-navigation #sale:hover {
+    color: var(--primaryLight);
+    transition: color 200ms ease;
+  }
+  #cs-navigation .light-sale svg:last-child {
+    margin-left: 15px;
+  }
   #cs-navigation .cs-button-solid {
     display: none;
   }
@@ -575,6 +607,9 @@ html {
     z-index: 10000;
   }
   #cs-navigation .cs-toggle {
+    display: none;
+  }
+  #cs-navigation .light-sale svg:last-child {
     display: none;
   }
   #cs-navigation .cs-logo {
@@ -690,9 +725,6 @@ html {
   #cs-navigation .cs-button-solid:hover {
     color: var(--button-color);
     transition: color 200ms ease;
-  }
-  #cs-navigation .cs-nav-button {
-    margin: 0 0 0 auto;
   }
 }
 /*-- -------------------------- -->

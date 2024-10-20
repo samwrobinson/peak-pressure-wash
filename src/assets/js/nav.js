@@ -31,4 +31,11 @@ const dropDowns = Array.from(document.querySelectorAll('#cs-navigation .cs-dropd
     }
     item.addEventListener('click', onClick)
     }
+
+const cancel = document.querySelector('.cancel');
+const sale = document.querySelector('.light-sale');
+
+cancel.addEventListener('click', () => {
+    sale.style.display = 'none';
+})
                             

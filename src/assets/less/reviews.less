@@ -400,6 +400,297 @@
     }
 }
 
+/*-- -------------------------- -->
+<---         Services           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #steps-1290 {
+        padding: var(--sectionPadding);
+        position: relative;
+
+        .cs-container {
+            /* changes to 1440px at tablet */
+            max-width: (550/16rem);
+            width: 100%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* set text align to center if content needs to be centrally aligned */
+            text-align: left;
+        }
+
+        .cs-text {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            max-width: (350/16rem);
+            width: 100%;
+            margin: 0;
+            color: var(--bodyTextColor);
+            text-align: inherit;
+        }
+
+        .cs-text {
+            max-width: (630/16rem);
+        }
+
+        .cs-card-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            /* 16px - 20px */
+            gap: clamp(1rem, 2vw, 1.25rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            background-color: #fff;
+            grid-column: span 12;
+            position: relative;
+            z-index: 1;
+            transition:
+                box-shadow 0.3s,
+                transform 0.3s;
+
+            &:hover {
+                transform: translateY(-0.4375rem);
+                .cs-picture {
+                    img {
+                        opacity: 0.3;
+                        transform: scale(1.1);
+                    }
+                }
+                .cs-h3 {
+                    color: var(--primaryLight);
+                }
+            }
+
+            &::after {
+                content: "";
+                width: (20/16rem);
+                height: (80/16rem);
+                margin: (16/16rem) auto;
+                background-image: url(https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/arrow-orange.svg);
+                background-position: center;
+                background-size: contain;
+                background-repeat: no-repeat;
+                opacity: 1;
+                display: block;
+                position: relative;
+                z-index: 10;
+            }
+
+            &:nth-of-type(2) {
+                &::after {
+                    transform: scaleX(-1);
+                }
+            }
+
+            &:last-of-type {
+                &::after {
+                    display: none;
+                }
+            }
+        }
+
+        .cs-link {
+            text-decoration: none;
+            display: block;
+        }
+
+        .cs-picture {
+            width: 100%;
+            height: (320/16rem);
+            margin: 0 0 (12/16rem) 0;
+            background-color: var(--primaryLight);
+            border-radius: (10/16rem);
+            display: block;
+            position: relative;
+            z-index: 10;
+            /* clips the img tag corners */
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition:
+                    transform 0.6s,
+                    opacity 0.3s;
+            }
+        }
+
+        .cs-number {
+            font-size: (20/16rem);
+            font-weight: bold;
+            width: (36/16rem);
+            height: (36/16rem);
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background-color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* prevents flexbox from squishing it */
+            flex: none;
+        }
+
+        .cs-h3 {
+            /* 20px - 25px */
+            font-size: clamp(1.25rem, 2.2vw, 1.5625rem);
+            line-height: 1.2em;
+            font-weight: 700;
+            word-break: break-all;
+            margin: 0 0 (12/16rem) 0;
+            color: var(--headerColor);
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: (12/16rem);
+            transition: color 0.3s;
+        }
+
+        .cs-item-text {
+            /* 14px - 16px  */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            margin: 0;
+            color: var(--bodyTextColor);
+        }
+
+        .cs-background {
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            right: 0;
+            height: 25%;
+            width: 100%;
+            opacity: 0.5;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-button-solid {
+            font-size: (16/16rem);
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            font-weight: 700;
+            text-align: center;
+            margin: 0;
+            margin-top: 1rem;
+            color: var(--primaryLight);
+            min-width: (150/16rem);
+            padding: 0 (24/16rem);
+            background-color: var(--button-color);
+            border-radius: (4/16rem);
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+
+            &:before {
+                content: "";
+                position: absolute;
+                height: 100%;
+                width: 0%;
+                background: var(--primaryLight);
+                opacity: 1;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                border-radius: (4/16rem);
+                transition: width 0.3s;
+            }
+
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+
+        .cs-button-solid:hover {
+            color: var(--button-color);
+            transition: color 200ms ease;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #steps-1290 {
+        padding-top: 0;
+        padding-bottom: 3rem;
+        .cs-container {
+            max-width: (1440/16rem);
+            gap: (100/16rem);
+        }
+
+        .cs-content {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .cs-item {
+            grid-column: span 4;
+            &::after {
+                width: (120/16rem);
+                height: (28/16rem);
+                margin: 0;
+                background-image: url(https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Graphics/arrow-orange-large.svg);
+                position: absolute;
+                bottom: (-40/16rem);
+                left: clamp(8.5rem, 18vw, 18.5rem);
+            }
+
+            &:nth-of-type(2) {
+                &::after {
+                    top: (-60/16rem);
+                    transform: rotateX(180deg);
+                }
+            }
+        }
+
+        .cs-background {
+            top: 0;
+            left: auto;
+            right: 50%;
+            /* 90px - 225px */
+            margin-right: clamp(5.625rem, 15vw, 14.0625rem);
+            height: 50%;
+            width: 50vw;
+        }
+    }
+}
+                                
+
  /*-- -------------------------- -->
 <---   Side By Side Reverse     -->
 <--- -------------------------- -*/

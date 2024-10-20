@@ -628,6 +628,44 @@ html {
             }
         }
 
+
+
+        .light-sale {
+            display: flex;
+            background-color: #69B12B;
+            justify-content: center;
+            align-items: center ;
+            min-width: 100%;
+            padding: 10px 20px;
+            margin: 10px 0 25px 0;
+            position: absolute;
+            right: 0;
+        }
+
+        .cs-button-solid:hover {
+            color: var(--button-color);
+            transition: color 200ms ease;
+        }
+        
+
+        #sale {
+            width: 100%;
+            display: inline-block;
+            height: 100%;
+            color: #fff; /* Text color */
+            font-weight: bold; /* Make the text stand out */
+            text-align: center;
+        }
+
+        #sale:hover {
+            color: var(--primaryLight);
+            transition: color 200ms ease;
+        }
+
+        .light-sale svg:last-child {
+            margin-left: 15px;
+        }
+
         .cs-button-solid {
             display: none;
         }
@@ -654,8 +692,12 @@ html {
         align-items: center;
         position: fixed;
         z-index: 10000;
-
+        
         .cs-toggle {
+            display: none;
+        }
+        
+        .light-sale svg:last-child {
             display: none;
         }
 
@@ -783,9 +825,6 @@ html {
             transition: color 200ms ease;
         }
 
-        .cs-nav-button {
-            margin: 0 0 0 auto;
-        }
     }
 }
 

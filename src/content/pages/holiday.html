@@ -96,10 +96,98 @@ eleventyNavigation:
             <p>
                 We don’t just install—we’ll also take down and store your lights once the holidays are over, making the entire experience hassle-free.
             </p>
-            <a href="/quote" class="cs-button-solid">Get a Quote!</a>
         </div>
     </div>
 </section>
+
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+
+<section id="steps-1290">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex-group">
+                <span class="cs-topper">Our Process</span>
+                <h2 class="cs-title">How To Get Started</h2>
+            </div>
+            <div>
+                <p class="cs-text">
+                    Ready to light up your home this holiday season? <strong>Getting a quote is easy!</strong> Just fill out our quote form and drop in your property address.
+                    <br><br>
+                    If Google Street View has your place covered, you're all set! Otherwise, snap a quick photo of your home, and we’ll whip up a custom mockup of your dazzling Christmas lights. <strong>You’ll see the magic before you even make a commitment</strong>. Reach out today for a stress-free, sparkling holiday display that’ll boost your curb appeal!
+                </p>
+                <a href="/quote" class="cs-button-solid">Quote</a>
+            </div>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                        srcset="{% getUrl "/assets/images/street-view-2.png" | resize({width: 686, height: 640}) | webp %}">
+                        <source media="(min-width: 601px)"
+                            srcset="{% getUrl "/assets/images/street-view-2.png" | resize({width: 896, height: 640}) | webp %}">
+                        <img loading="lazy" decoding="async"
+                            src="{% getUrl "/assets/images/street-view-2.png" | resize({width: 896, height: 640}) | webp %}"
+                            alt="House without lights" width="413" height="240" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">
+                        <span class="cs-number">01</span>
+                        Fill Out a Form
+                    </h3>
+                    <p class="cs-item-text">
+                        Simply fill out our quick quote form and pop in your property address. Easy peasy!
+
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                            srcset="{% getUrl "/assets/images/lights-mockup.jpg" | resize({width: 686, height: 640}) | webp %}">
+                        <source media="(min-width: 601px)"
+                            srcset="{% getUrl "/assets/images/lights-mockup.jpg" | resize({width: 896, height: 640}) | webp %}">
+                        <img loading="lazy" decoding="async"
+                            src="{% getUrl "/assets/images/lights-mockup.jpg" | resize({width: 896, height: 640}) | webp %}"
+                            alt="house with lights" width="413" height="240" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">
+                        <span class="cs-number">02</span>
+                        Review Our Design
+                    </h3>
+                    <p class="cs-item-text">
+                        We’ll create a custom mockup of your home's stunning Christmas lights. Get a sneak peek of the sparkle before you even commit!
+
+ You’ll see the magic before you even make a commitment.
+                    </p>
+                </a>
+            </li>
+            <li class="cs-item">
+                <a href="" class="cs-link">
+                    <picture class="cs-picture">
+                        <source media="(max-width: 600px)"
+                            srcset="{% getUrl "/assets/images/step-3.jpg" | resize({width: 686, height: 640}) | webp %}">
+                        <source media="(min-width: 601px)"
+                            srcset="{% getUrl "/assets/images/step-3.jpg" | resize({width: 686, height: 896}) | webp %}">
+                        <img loading="lazy" decoding="async"
+                            src="{% getUrl "/assets/images/step-3.jpg" | resize({width: 686, height: 896}) | webp %}"
+                            alt="photo of finished christmas lights" aria-hidden="true">
+                    </picture>
+                    <h3 class="cs-h3">
+                        <span class="cs-number">03</span>
+                        Sit Back & Enjoy!
+                    </h3>
+                    <p class="cs-item-text">
+                        We’ll schedule your installation, and you can relax while we bring your holiday vision to life. That’s it — holiday cheer, hassle-free!
+                    </p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
 
 <!-- ============================================ -->
 <!--             Side By Side Reverse             -->
