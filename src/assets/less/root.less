@@ -410,6 +410,10 @@ html {
             }
         }
 
+        .cs-button-solid {
+            background-color: #B12B2B;
+        }
+
         .cs-logo {
             width: 40%;
             max-width: (146/16rem);
@@ -632,7 +636,7 @@ html {
 
         .light-sale {
             display: flex;
-            background-color: #69B12B;
+            background-color: #B12B2B;
             justify-content: center;
             align-items: center ;
             min-width: 100%;
@@ -640,6 +644,13 @@ html {
             margin: 10px 0 25px 0;
             position: absolute;
             right: 0;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
         .cs-button-solid:hover {
@@ -699,6 +710,16 @@ html {
         
         .light-sale svg:last-child {
             display: none;
+        }
+
+        .light-sale {
+            animation: pulse 2s infinite;
+        }
+    
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
 
         .cs-logo {
@@ -791,7 +812,7 @@ html {
             color: var(--primaryLight);
             min-width: (150/16rem);
             padding: 0 (24/16rem);
-            background-color: var(--button-color);
+            background-color:#B12B2B;
             border-radius: (4/16rem);
             display: inline-block;
             position: relative;

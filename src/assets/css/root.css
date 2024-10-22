@@ -367,6 +367,9 @@ html {
     transform: translateY(0);
     opacity: 1;
   }
+  #cs-navigation .cs-button-solid {
+    background-color: #B12B2B;
+  }
   #cs-navigation .cs-logo {
     width: 40%;
     max-width: 9.125rem;
@@ -553,7 +556,7 @@ html {
   }
   #cs-navigation .light-sale {
     display: flex;
-    background-color: #69B12B;
+    background-color: #B12B2B;
     justify-content: center;
     align-items: center ;
     min-width: 100%;
@@ -561,6 +564,18 @@ html {
     margin: 10px 0 25px 0;
     position: absolute;
     right: 0;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
   #cs-navigation .cs-button-solid:hover {
     color: var(--button-color);
@@ -611,6 +626,20 @@ html {
   }
   #cs-navigation .light-sale svg:last-child {
     display: none;
+  }
+  #cs-navigation .light-sale {
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
   #cs-navigation .cs-logo {
     width: 18.4%;
@@ -698,7 +727,7 @@ html {
     color: var(--primaryLight);
     min-width: 9.375rem;
     padding: 0 1.5rem;
-    background-color: var(--button-color);
+    background-color: #B12B2B;
     border-radius: 0.25rem;
     display: inline-block;
     position: relative;
