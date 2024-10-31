@@ -429,6 +429,29 @@ eleventyNavigation:
         </div>
     </div>
 </section>
+
+<div id="cs-modal-1605" style="z-index: -10">
+    <div class="cs-wrapper">
+        <button id="cs-close-1605" class="cs-close" aria-label="close pop up">
+            <img decoding="async" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Images/Icons/Close.svg" alt="clothing" width="24" height="24" aria-hidden="true">
+        </button>
+        <picture class="cs-picture">
+            <!--Mobile Image-->
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/modal.jpg" | resize({width: 686, height: 550}) | webp %}">
+            <!--Tablet and above Image-->
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/modal.jpg" | resize({width: 783, height: 864}) | webp %}">
+            <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/modal.jpg" | resize({width: 783, height: 864}) | webp %}" alt="clothing" width="413" height="500">
+        </picture>
+        <div class="cs-content">
+            <span class="cs-header">
+                Are you here for your Home or Business?
+            </span>
+            <a href="/residential" class="cs-button-solid">Home</a>
+            <a href="/commercial" class="cs-button-solid">Business</a>
+        </div>
+    </div>
+</div>
+                                
                                 
 
     {% include 'components/cta.html' %}
