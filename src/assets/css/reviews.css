@@ -381,6 +381,13 @@
     top: 0.625rem;
     left: -0.75rem;
   }
+  #RPsbs-313 .cs-form,
+  #RPsbsr-313 .cs-form,
+  #RPsbs-314 .cs-form {
+    max-height: 32rem;
+    overflow: scroll;
+    width: 100%;
+  }
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
@@ -401,6 +408,12 @@
   #RPsbsr-313 .cs-content,
   #RPsbs-314 .cs-content {
     margin: 0;
+  }
+  #RPsbs-313 .cs-form,
+  #RPsbsr-313 .cs-form,
+  #RPsbs-314 .cs-form {
+    width: 100%;
+    max-width: 36.125rem;
   }
 }
 /*-- -------------------------- -->
