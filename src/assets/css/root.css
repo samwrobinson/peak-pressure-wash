@@ -181,6 +181,12 @@
   .cs-hide-on-mobile {
     display: none;
   }
+  #privacy {
+    margin: 100px 25px;
+  }
+  #privacy > * {
+    margin-bottom: 1rem;
+  }
 }
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
@@ -189,6 +195,10 @@
   }
   .cs-hide-on-desktop {
     display: none;
+  }
+  #privacy {
+    max-width: 40rem;
+    margin: 100px auto;
   }
 }
 /* Fonts and general styles */
