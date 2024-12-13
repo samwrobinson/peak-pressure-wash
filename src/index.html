@@ -13,15 +13,6 @@ eleventyNavigation:
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Y8T4SQN82"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-2Y8T4SQN82');
-    </script>
 
     <!-- Meta Pixel Code -->
     <script>
@@ -135,7 +126,7 @@ eleventyNavigation:
 
     <!-- Background Image -->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-image.png" | resize({width: 750, height: 1450, position: "bottom" }) | webp({quality: 40}) %}">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-image.png" | resize({width: 750, height: 1450, position: "bottom" }) | webp({quality: 30}) %}">
         <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero-image.png" | resize({width: 1625, height: 1020}) | webp %}">
         <img decoding="async" src="{% getUrl "/assets/images/hero-image.png" | resize({width: 1625, height: 1020}) | webp %}" alt="Roof Pressure washing" aria-hidden="true">
     </picture>
@@ -588,28 +579,6 @@ eleventyNavigation:
         </div>
     </div>
 </section>
-                                
-<div id="cs-modal-1605" style="z-index: -10">
-    <div class="cs-wrapper">
-        <button id="cs-close-1605" class="cs-close" aria-label="close pop up">
-            <img decoding="async" src="/assets/svgs/close.svg" alt="Close window" width="24" height="24" aria-hidden="true">
-        </button>
-        <picture class="cs-picture">
-            <!--Mobile Image-->
-            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/modal.jpg" | resize({width: 686, height: 550}) | webp %}">
-            <!--Tablet and above Image-->
-            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/modal.jpg" | resize({width: 783, height: 864}) | webp %}">
-            <img decoding="async" src="{% getUrl "/assets/images/modal.jpg" | resize({width: 783, height: 864}) | webp %}" alt="clothing" width="413" height="500">
-        </picture>
-        <div class="cs-content">
-            <span class="cs-header">
-                Are you here for your Home or Business?
-            </span>
-            <a href="/residential" class="cs-button-solid">Home</a>
-            <a href="/commercial" class="cs-button-solid">Business</a>
-        </div>
-    </div>
-</div>
                                 
                                 
 
