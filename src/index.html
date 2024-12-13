@@ -50,6 +50,9 @@ eleventyNavigation:
         <link rel="stylesheet" href="/css/local.css">
     </noscript>
 
+    <link rel="preload" as="image" href="/assets/images/modal.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="/assets/images/hero-image.png" fetchpriority="high">
+
     <!-- Script for Netlify Identity -->
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <script defer>
@@ -596,7 +599,7 @@ eleventyNavigation:
             <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/modal.jpg" | resize({width: 686, height: 550}) | webp %}">
             <!--Tablet and above Image-->
             <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/modal.jpg" | resize({width: 783, height: 864}) | webp %}">
-            <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/modal.jpg" | resize({width: 783, height: 864}) | webp %}" alt="clothing" width="413" height="500">
+            <img decoding="async" src="{% getUrl "/assets/images/modal.jpg" | resize({width: 783, height: 864}) | webp %}" alt="clothing" width="413" height="500">
         </picture>
         <div class="cs-content">
             <span class="cs-header">
