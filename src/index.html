@@ -42,8 +42,13 @@ eleventyNavigation:
     </noscript>
     <!-- End Meta Pixel Code -->
 
-    <link rel="stylesheet" href="/assets/css/local.css"/>
-    <link rel="stylesheet" href="/assets/css/critical.css"/>
+    <!-- Critical Resources -->
+    <link rel="stylesheet" href="/assets/css/critical.css">
+    <link rel="stylesheet" href="/assets/css/local.css"
+        media="print" onload="this.media='all'; this.onload=null;">
+    <noscript>
+        <link rel="stylesheet" href="/css/local.css">
+    </noscript>
 
     <!-- Script for Netlify Identity -->
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
