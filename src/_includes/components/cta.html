@@ -16,17 +16,17 @@
         <div class="cs-image-group">
             <!--Bucket Image-->
             <picture class="cs-bucket">
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/peak-logo.png" | resize({width: 400, height: 260}) | webp({quality: 20}) %}">
-                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/peak-logo.png" | resize({width: 640, height: 400}) | webp({quality: 20}) %}">
-                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/peak-logo.png" | resize({width: 640, height: 400}) | webp({quality: 20}) %}" alt="Peak Pressure Wash Logo" aria-hidden="true">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/peak-logo.webp" | resize({width: 400, height: 260}) | webp({quality: 20}) %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/peak-logo.webp" | resize({width: 640, height: 400}) | webp({quality: 20}) %}">
+                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/peak-logo.webp" | resize({width: 640, height: 400}) | webp({quality: 20}) %}" alt="Peak Pressure Wash Logo" width="640" height="400" aria-hidden="true">
             </picture>
         </div>
     </div>
     <!--Background Image-->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/fabric-m.png">
-        <source media="(min-width: 601px)" srcset="https://csimg.nyc3.digitaloceanspaces.com/CTA/fabric.png">
-        <img loading="lazy" decoding="async" src="https://csimg.nyc3.digitaloceanspaces.com/CTA/fabric.png" alt="fabric" width="1920" height="660" aria-hidden="true">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/fabric-m.png" | webp %}">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/fabric.png" | webp %}">
+        <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/fabric.png" | webp %}" alt="fabric" width="1920" height="660" aria-hidden="true">
     </picture>
 </section>
                                 
