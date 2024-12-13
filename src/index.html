@@ -2,7 +2,7 @@
 title: 'Midsouth Pressure Washing Services| Peak Pressure Wash | Midsouth, USA'
 description: "Transform your property with Peak Pressure Wash, delivering expert exterior cleaning throughout Memphis and the Midsouth region. Specializing in residential and commercial pressure washing with guaranteed results. Get $50 off your first service!"
 ogImage: '/assets/images/index-image.webp'
-preloadImg: '/assets/images/hero-m.webp'
+preloadImg: '/assets/images/hero-image-m-2.webp'
 permalink: '/'
 tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
 eleventyNavigation:
@@ -22,7 +22,7 @@ eleventyNavigation:
         <link rel="stylesheet" href="/assets/css/local.css">
     </noscript>
 
-    <link rel="preload" as="image" href="/assets/images/hero-image-m.webp" fetchpriority="high">
+    <link rel="preload" as="image" href="/assets/images/hero-image-m-2.webp" fetchpriority="high">
 
     <!-- Script for Netlify Identity -->
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
@@ -103,7 +103,7 @@ eleventyNavigation:
 
     <!-- Background Image -->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-image-m.webp" | resize({width: 750, height: 1450, position: "bottom" }) | webp({quality: 30}) %}">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-image-m-2.webp" | resize({width: 750, height: 1450, position: "bottom" }) | webp({quality: 30}) %}">
         <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero-image-v2.webp" | resize({width: 1625, height: 1020}) | webp %}">
         <img decoding="async" src="{% getUrl "/assets/images/hero-image-v2.webp" | resize({width: 1625, height: 1020}) | webp %}" alt="Roof Pressure washing" aria-hidden="true">
     </picture>
