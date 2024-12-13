@@ -90,13 +90,10 @@ eleventyNavigation:
 <section id="hero-331">
     <div class="cs-container">
         <div class="cs-flex-group">
-            <h1 class="cs-title"><span class="cs-accent">Premium</span> Exterior Cleaning for Homes & Businesses in the Midsouth</h1>
+            <h1 class="cs-title"><span class="cs-accent">Premium</span> Exterior Cleaning for Homes & Businesses</h1>
             <h2 class="cs-text">Professional Pressure Washing in the Midsouth and Surrounding Areas</h2>
             <p class="cs-text">
                 Proudly serving Senatobia, Coldwater, Como, Hernando, Germantown, Collierville, Bartlett, Arlington, Lakeland, and surrounding Midsouth communities. Local, family-owned pressure washing expertise right in your neighborhood.
-            </p>
-            <p class="cs-text">
-                Maintaining the pristine look of your property with expert care, precision, and a commitment to customer satisfaction.
             </p>
             <div class="cs-button-group">
                 <a href="/contact" class="cs-button-solid">Get Started</a>
@@ -119,7 +116,7 @@ eleventyNavigation:
 <ul id="services-331">
     <li class="cs-item">
         <picture class="cs-icon-wrapper">
-            <img class="cs-icon" decoding="async" src="/assets/images/handshake.png" alt="icon" width="32" height="32" aria-hidden="true">
+            <img class="cs-icon" decoding="async" src="/assets/svgs/handshake.svg" alt="icon" width="32" height="32" aria-hidden="true">
         </picture>
         <div class="cs-info-group">
             <span class="cs-header">People over Process</span>
@@ -128,7 +125,7 @@ eleventyNavigation:
     </li>
     <li class="cs-item">
         <picture class="cs-icon-wrapper">
-            <img class="cs-icon" decoding="async" src="/assets/images/communication.png" alt="icon" width="32" height="32" aria-hidden="true">
+            <img class="cs-icon" decoding="async" src="/assets/svgs/communication.svg" alt="icon" width="32" height="32" aria-hidden="true">
         </picture>
         <div class="cs-info-group">
             <span class="cs-header">Clear Communication</span>
@@ -137,7 +134,7 @@ eleventyNavigation:
     </li>
     <li class="cs-item">
         <picture class="cs-icon-wrapper">
-            <img class="cs-icon" decoding="async" src="/assets/images/dollar-sign.png" alt="icon" width="32" height="32" aria-hidden="true">
+            <img class="cs-icon" decoding="async" src="/assets/svgs/dollar-sign.svg" alt="icon" width="32" height="32" aria-hidden="true">
         </picture>
         <div class="cs-info-group">
             <span class="cs-header">Fair pricing</span>
@@ -163,7 +160,7 @@ eleventyNavigation:
             <li class="cs-item">
                 <div class="cs-box">
                     <picture class="cs-wrapper">
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/home.png" alt="icon" width="70" height="70">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/home.svg" alt="icon" width="70" height="70">
                     </picture>
                     <h3 class="cs-h3">House Wash</h3>
                     <p class="cs-item-text">Restore your home’s curb appeal with our comprehensive exterior cleaning services. Leave your siding looking as good as new!</p>
@@ -178,7 +175,7 @@ eleventyNavigation:
             <li class="cs-item">
                 <div class="cs-box">
                     <picture class="cs-wrapper">
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/shingle.png" alt="icon" width="70" height="70">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/shingle.svg" alt="icon" width="70" height="70">
                     </picture>
                     <h3 class="cs-h3">Roof Cleaning</h3>
                     <p class="cs-item-text">Prolong the life of your roof with professional cleaning that removes moss, algae, and debris, ensuring it looks fresh and lasts longer.</p>
@@ -193,7 +190,7 @@ eleventyNavigation:
             <li class="cs-item">
                 <div class="cs-box">
                     <picture class="cs-wrapper">
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/concrete.png" alt="icon" width="70" height="70">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/concrete.svg" alt="icon" width="70" height="70">
                     </picture>
                     <h3 class="cs-h3">Surface Cleaning</h3>
                     <p class="cs-item-text">Make your driveway and walkways shine again. Our powerful cleaning methods remove tough stains and restore your concrete surfaces.</p>
@@ -208,7 +205,7 @@ eleventyNavigation:
             <li class="cs-item">
                 <div class="cs-box">
                     <picture class="cs-wrapper">
-                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/window.png" alt="icon" width="70" height="70">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/window.svg" alt="icon" width="70" height="70">
                     </picture>
                     <h3 class="cs-h3">Windows</h3>
                     <p class="cs-item-text">Enjoy streak-free windows with our professional cleaning services. Experience crystal-clear views and let natural light flood your home.</p>
@@ -271,9 +268,9 @@ eleventyNavigation:
         <!-- Left Image Section -->
         <div class="cs-image-group">
             <picture class="cs-picture cs-picture1">
-                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/roof-before.jpeg" | resize({width: 282, height: 314}) | webp %}">
-                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/roof-before.jpeg" | resize({width: 522, height: 581}) | webp %}">
-                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/roof-before.jpeg" | resize({width: 522, height: 581}) | webp %}" alt="Dirty roof before pressure washing" aria-hidden="true">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/roof-before.webp" | resize({width: 282, height: 314}) | webp %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/roof-before.webp" | resize({width: 522, height: 581, position: "attention" }) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/roof-before.webp" | resize({width: 522, height: 581, position: "attention" }) | webp %}" alt="Dirty roof before pressure washing" aria-hidden="true">
             </picture>
             <picture class="cs-picture cs-picture2">
                 <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/roof-after.webp" | resize({width: 214, height: 206}) %}">
