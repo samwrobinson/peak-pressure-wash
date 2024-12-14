@@ -55,14 +55,14 @@ eleventyNavigation:
             </div>
             <div class="cs-image-group">
                 <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/holiday-1.webp">
-                    <source media="(min-width: 601px)" srcset="/assets/images/holiday-1.webp">
-                    <img loading="lazy" decoding="async" src="/assets/images/holiday-1.webp" alt="Residential driveway cleaning" width="522" height="581" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/holiday-1.webp' | resize({width: 628, height: 628}) | avif %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/holiday-1.webp' | resize({width: 892, height: 892}) | avif %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/holiday-1.webp' | resize({width: 892, height: 892}) | avif %}" alt="Holiday Lighting in the Midsouth" width="522" height="581" aria-hidden="true">
                 </picture>
                 <picture class="cs-picture cs-picture2">
-                    <source media="(max-width: 600px)" srcset="/assets/images/holiday-2.webp">
-                    <source media="(min-width: 601px)" srcset="/assets/images/holiday-2.webp">
-                    <img loading="lazy" decoding="async" src="/assets/images/holiday-2.webp" alt="Peak Pressure Wash Holiday Lighting Installation" width="414" height="400" aria-hidden="true">
+                    <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/holiday-2.webp' | resize({width: 228, height: 212}) | avif %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/holiday-2.webp' | resize({width: 600, height: 578}) | avif %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/holiday-2.webp' | resize({width: 600, height: 578}) | avif %}" alt="Holiday lighting in the Midsouth" width="522" height="581" aria-hidden="true">
                 </picture>
             </div>
         </div>
@@ -165,11 +165,11 @@ eleventyNavigation:
                 <a href="" class="cs-link">
                     <picture class="cs-picture">
                         <source media="(max-width: 600px)"
-                            srcset="{% getUrl "/assets/images/city-cheese-cake.jpg" | resize({width: 686, height: 640}) | webp %}">
+                            srcset="{% getUrl "/assets/images/city-cheese-cake.webp" | resize({width: 686, height: 640}) | webp %}">
                         <source media="(min-width: 601px)"
-                            srcset="{% getUrl "/assets/images/city-cheese-cake.jpg" | resize({width: 686, height: 896}) | webp %}">
+                            srcset="{% getUrl "/assets/images/city-cheese-cake.webp" | resize({width: 686, height: 896}) | webp %}">
                         <img loading="lazy" decoding="async"
-                            src="{% getUrl "/assets/images/city-cheese-cake.jpg" | resize({width: 686, height: 896}) | webp %}"
+                            src="{% getUrl "/assets/images/city-cheese-cake.webp" | resize({width: 686, height: 896}) | webp %}"
                             alt="photo of finished christmas lights" aria-hidden="true">
                     </picture>
                     <h3 class="cs-h3">

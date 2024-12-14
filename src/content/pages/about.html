@@ -24,9 +24,9 @@ eleventyNavigation:
     <section id="int-hero">
         <h1 id="home-h">About Us</h1>
         <picture>
-            <source media="(max-width: 600px)" srcset="/assets/images/about-us-banner.webp">
-            <source media="(min-width: 601px)" srcset="/assets/images/about-us-banner.webp">
-            <img aria-hidden="true" decoding="async" src="about-us-banner.webp" alt="Pressure washed residential home" loading="eager" width="2500" height="1667">
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/about-us-banner.webp" | resize({width: 750, height: 400}) | webp({quality: 40}) %}">
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/about-us-banner.webp" | resize({width: 2018, height: 908}) %}">
+            <img aria-hidden="true" decoding="async" src="{% getUrl "/assets/images/about-us-banner.webp" | resize({width: 2018, height: 908}) %} alt="Pressure washed residential home" loading="eager" width="2500" height="1667">
         </picture>
 
     </section>
@@ -40,9 +40,9 @@ eleventyNavigation:
             <!-- Left Image Section -->
             <div class="cs-left">
                 <picture class="cs-picture cs-picture1">
-                    <source media="(max-width: 600px)" srcset="/assets/images/cameron-family.webp">
-                    <source media="(min-width: 601px)" srcset="/assets/images/cameron-family.webp">
-                    <img aria-hidden="true" decoding="async" src="/assets/images/cameron-family.webp" alt="Cameron and his family" loading="lazy" width="400" height="563">
+                    <source media="(max-width: 600px)" srcset="/assets/images/cameron-family-1.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/cameron-family-1.webp">
+                    <img aria-hidden="true" decoding="async" src="/assets/images/cameron-family-1.webp" alt="Cameron and his family" loading="lazy" width="400" height="563">
                 </picture>
             </div>
             <!-- Right Content Section-->
