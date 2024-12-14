@@ -644,7 +644,7 @@
 /* Desktop - 1300px - Parallax Effect */
 @media only screen and (min-width: 81.25rem) {
   #contact-321 {
-    background: url("https://csimg.nyc3.digitaloceanspaces.com/Contact-Page/round-table.jpg");
+    background: url("/assets/images/about-us-banner.webp");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
