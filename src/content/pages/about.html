@@ -13,7 +13,10 @@ eleventyNavigation:
 
 {% block head %}
 
-    <link rel="stylesheet" href="/assets/css/about.css">
+    <link rel="stylesheet" href="/assets/css/about.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/about.css" />
+    </noscript>
 {% endblock %}
 
 {% block body %}

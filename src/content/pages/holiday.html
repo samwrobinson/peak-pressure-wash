@@ -13,7 +13,10 @@ eleventyNavigation:
 
 {% block head %}
 
-    <link rel="stylesheet" href="/assets/css/reviews.css">
+    <link rel="stylesheet" href="/assets/css/reviews.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/reviews.css" />
+    </noscript>
 {% endblock %}
 
 {% block body %}
@@ -29,10 +32,10 @@ eleventyNavigation:
     <!--Background Image-->
     <picture class="cs-background" aria-hidden="true">
         <!--Mobile Image-->
-        <source media="(max-width: 600px)" srcset="/assets/images/holiday-banner.webp">
+        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/holiday-banner.webp' | resize({width: 750, height: 736}) | avif %}">
         <!--Tablet and above Image-->
-        <source media="(min-width: 601px)" srcset="/assets/images/holiday-banner.webp">
-        <img loading="lazy" decoding="async" src="/assets/images/holiday-banner.webp" alt="yoga" width="1280" height="568">
+        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/holiday-banner.webp' | resize({width: 2018, height: 800}) | avif %}">
+        <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/holiday-banner.webp' | resize({width: 2018, height: 800}) | avif %}" alt="yoga" width="1280" height="568">
     </picture>
     <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
     <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -143,11 +146,11 @@ eleventyNavigation:
                 <a href="" class="cs-link">
                     <picture class="cs-picture">
                         <source media="(max-width: 600px)"
-                            srcset="{% getUrl "/assets/images/lights-mockup.jpg" | resize({width: 686, height: 640}) | webp %}">
+                            srcset="{% getUrl "/assets/images/lights-mockup.webp" | resize({width: 686, height: 640}) | webp %}">
                         <source media="(min-width: 601px)"
-                            srcset="{% getUrl "/assets/images/lights-mockup.jpg" | resize({width: 896, height: 640}) | webp %}">
+                            srcset="{% getUrl "/assets/images/lights-mockup.webp" | resize({width: 896, height: 640}) | webp %}">
                         <img loading="lazy" decoding="async"
-                            src="{% getUrl "/assets/images/lights-mockup.jpg" | resize({width: 896, height: 640}) | webp %}"
+                            src="{% getUrl "/assets/images/lights-mockup.webp" | resize({width: 896, height: 640}) | webp %}"
                             alt="house with lights" width="413" height="240" aria-hidden="true">
                     </picture>
                     <h3 class="cs-h3">
@@ -195,10 +198,10 @@ eleventyNavigation:
         <div class="cs-image-group">
             <picture class="cs-background">
                 <!--Mobile Image-->
-                <source media="(max-width: 600px)" srcset="/assets/images/holiday-3.webp">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/holiday-3.webp' | resize({width: 646, height: 1040}) | avif %}">
                 <!--Tablet and above Image-->
-                <source media="(min-width: 601px)" srcset="/assets/images/holiday-3.webp">
-                <img loading="lazy" decoding="async" src="/assets/images/holiday-3.webp" alt="Peak Pressure Wash Holiday Lighting" width="605868" height="690">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/holiday-3.webp' | resize({width: 914, height: 1400}) | avif %}">
+                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/holiday-3.webp' | resize({width: 914, height: 1400}) | avif %}" alt="Peak Pressure Wash Holiday Lighting" width="605" height="690">
             </picture>
         </div>
         <div class="cs-content">
