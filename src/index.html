@@ -16,7 +16,7 @@ eleventyNavigation:
 
     <!-- Critical Resources -->
     <link rel="stylesheet" href="/assets/css/critical.css">
-    
+
     <link rel="stylesheet" href="/assets/css/local.css"
     media="print" onload="this.media='all'; this.onload=null;">
     <noscript>
@@ -104,7 +104,7 @@ eleventyNavigation:
 
     <!-- Background Image -->
     <picture class="cs-background">
-        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-image-m-2.webp" | resize({width: 750, height: 1450, position: "bottom" }) | webp({quality: 30}) %}">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-image-m-2.webp" | resize({width: 750, height: 1450, position: "bottom" }) | webp({quality: 20}) %}">
         <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero-image-v2.webp" | resize({width: 1625, height: 1020}) | webp %}">
         <img decoding="async" src="{% getUrl "/assets/images/hero-image-v2.webp" | resize({width: 1625, height: 1020}) | webp %}" alt="Roof Pressure washing" aria-hidden="true">
     </picture>
