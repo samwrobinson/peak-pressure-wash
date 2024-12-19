@@ -51,9 +51,6 @@
 
         {% block head %}{% endblock %}
 
-        <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-2Y8T4SQN82"></script>
-
         <title>{{ title }}</title>
     </head>
     <body>
@@ -65,27 +62,6 @@
             {% block body %}{% endblock %}
         </main>
         {% include "components/footer.html" %}
-
-        <!-- Google Analytics load on scroll -->
-        <script>
-            function analyticsOnScroll() {
-                var head = document.getElementsByTagName('head')[0]
-                var script = document.createElement('script')
-                script.type = 'text/javascript';
-                script.src = 'https://www.googletagmanager.com/gtag/js?id=G-2Y8T4SQN82'
-                head.appendChild(script);
-                document.removeEventListener('scroll', analyticsOnScroll);
-            };
-            document.addEventListener('scroll', analyticsOnScroll);
-        </script>
-
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-    
-            gtag('config', 'G-2Y8T4SQN82');
-        </script>
 
     </body>
 </html>
