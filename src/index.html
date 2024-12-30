@@ -1,4 +1,570 @@
 ---
+title: 'Midsouth Pressure Washing Services| Peak Pressure Wash | Midsouth, USA'
+description: "Transform your property with Peak Pressure Wash, delivering expert exterior cleaning throughout Memphis and the Midsouth region. Specializing in residential and commercial pressure washing with guaranteed results. Get $50 off your first service!"
+ogImage: '/assets/images/index-image.webp'
+preloadImg: '/assets/images/hero-image-m-2.webp'
+permalink: '/'
+tags: 'sitemap' # Sitemap will use all pages in content/, due to content.json. As index.html is not included in content/ we need to manually add the sitemap tag to this page (only).
+eleventyNavigation:
+  key: Home
+  order: 100
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="60ad330d-974d-4d1c-bb55-25616534cf71"></script>
+
+    <!-- Critical Resources -->
+    <link rel="stylesheet" href="/assets/css/critical.css">
+
+    <link rel="stylesheet" href="/assets/css/local.css"
+    media="print" onload="this.media='all'; this.onload=null;">
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/local.css">
+    </noscript>
+
+    <link rel="preload" as="image" href="/assets/images/hero-image-m-2.webp" fetchpriority="high">
+
+    <!-- Script for Netlify Identity -->
+    <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    <script defer>
+        if (window.netlifyIdentity) {
+            window
+                .netlifyIdentity
+                .on('init', (user) => {
+                    if (!user) {
+                        window
+                            .netlifyIdentity
+                            .on('login', () => {
+                                document.location.href = '/admin/';
+                            });
+                    }
+                });
+        }
+    </script>
+
+    <!-- JSON Schema Markup -->
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "LocalBusiness",
+            "name": "{{ client.name }}",
+            {% if preloadImg %}"image": "{{ preloadImg }}",{% endif %}
+            {% if client.phoneFormatted %}"telephone": "{{ client.phoneFormatted }}",{% endif %}
+            {% if client.email %}"email": "{{ client.email }}",{% endif %}
+            {% if client.address %}
+                "address": {
+                    "@type": "PostalAddress"{% if client.address.lineOne %},
+                        "streetAddress": "{{ client.address.lineOne }}{% if client.address.lineTwo %}, {{ client.address.lineTwo }}{% endif %}"
+                    {% endif %}
+                    {% if client.address.city %},
+                        "addressLocality": "{{ client.address.city }}"
+                    {% endif %}
+                    {% if client.address.state %},
+                        "addressRegion": "{{ client.address.state }}"
+                    {% endif %}
+                    {% if client.address.zip %},
+                        "postalCode": "{{ client.address.zip }}"
+                    {% endif %}
+                    {% if client.address.country %},
+                        "addressCountry": "{{ client.address.country }}"
+                    {% endif %}
+                },
+            {% endif %}
+            {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
+            {% if client.socials %}
+                "sameAs": [{% for platform, url in client.socials %}
+                        {% if not loop.first %},{% endif %}
+                        "{{ url }}"
+                    {% endfor %}]
+            {% endif %}
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                    Hero                      -->
+<!-- ============================================ -->
+
+<section id="hero-331">
+    <div class="cs-container">
+        <div class="cs-flex-group">
+            <h1 class="cs-title"><span class="cs-accent">Premium</span> Exterior Cleaning for Homes & Businesses</h1>
+            <h2 class="cs-text">Professional Pressure Washing in the Midsouth and Surrounding Areas</h2>
+            <p class="cs-text">
+                Proudly serving Senatobia, Coldwater, Como, Hernando, Germantown, Collierville, Bartlett, Arlington, Lakeland, and surrounding Midsouth communities. Local, family-owned pressure washing expertise right in your neighborhood.
+            </p>
+            <div class="cs-button-group">
+                <a href="/contact" class="cs-button-solid">Get Started</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Background Image -->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-image-m-2.webp" | resize({width: 375, height: 773, position: "bottom" }) | webp({quality: 20}) %}">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero-image-v2.webp" | resize({width: 1625, height: 1020}) | webp %}">
+        <img decoding="async" src="{% getUrl "/assets/images/hero-image-v2.webp" | resize({width: 1625, height: 1020}) | webp %}" alt="Roof Pressure washing" aria-hidden="true">
+    </picture>
+</section>
+
+<!-- ============================================ -->
+<!--                   Services                   -->
+<!-- ============================================ -->
+
+<ul id="services-331">
+    <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+            <img class="cs-icon" decoding="async" src="/assets/svgs/handshake.svg" alt="icon" width="32" height="32" aria-hidden="true">
+        </picture>
+        <div class="cs-info-group">
+            <span class="cs-header">People over Process</span>
+            <span class="cs-desc">We prioritize relationships and customer satisfaction.</span>
+        </div>
+    </li>
+    <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+            <img class="cs-icon" decoding="async" src="/assets/svgs/communication.svg" alt="icon" width="32" height="32" aria-hidden="true">
+        </picture>
+        <div class="cs-info-group">
+            <span class="cs-header">Clear Communication</span>
+            <span class="cs-desc">Transparent, honest communication.</span>
+        </div>
+    </li>
+    <li class="cs-item">
+        <picture class="cs-icon-wrapper">
+            <img class="cs-icon" decoding="async" src="/assets/svgs/dollar-sign.svg" alt="icon" width="32" height="32" aria-hidden="true">
+        </picture>
+        <div class="cs-info-group">
+            <span class="cs-header">Fair pricing</span>
+            <span class="cs-desc">Contact us 24 Hours a day</span>
+        </div>
+    </li>
+</ul>
+
+<!-- ============================================ -->
+<!--                  Services                    -->
+<!-- ============================================ -->
+
+<section id="services-447">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Professional Pressure Washing Services</span>
+            <h2 class="cs-title">Expert Pressure Washing in the Midsouth</h2>
+            <p class="cs-text">
+                At Peak Pressure Wash, we handle all your exterior cleaning needs, whether residential or commercial. From rejuvenating home exteriors to keeping commercial properties spotless, our team delivers exceptional results every time.
+            </p>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <div class="cs-box">
+                    <picture class="cs-wrapper">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/home.svg" alt="icon" width="70" height="70">
+                    </picture>
+                    <h3 class="cs-h3">House Wash</h3>
+                    <p class="cs-item-text">Restore your home’s curb appeal with our comprehensive exterior cleaning services. Leave your siding looking as good as new!</p>
+                    <a href="/residential" class="cs-link">Read More</a>
+                </div>
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/siding-service.webp" | resize({width: 343, height: 250, position: "bottom"}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/siding-service.webp" | resize({width: 345, height: 428, position: "bottom"}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/siding-service.webp" | resize({width: 345, height: 428, position: "bottom"}) %}" alt="Pressure washing house siding">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <div class="cs-box">
+                    <picture class="cs-wrapper">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/shingle.svg" alt="icon" width="70" height="70">
+                    </picture>
+                    <h3 class="cs-h3">Roof Cleaning</h3>
+                    <p class="cs-item-text">Prolong the life of your roof with professional cleaning that removes moss, algae, and debris, ensuring it looks fresh and lasts longer.</p>
+                    <a href="/residential" class="cs-link">Read More</a>
+                </div>
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/roof-service.webp" | resize({width: 343, height: 250}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/roof-service.webp" | resize({width: 345, height: 428}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/roof-service.webp" | resize({width: 345, height: 428}) %}" alt="Pressure washing a resdiential roof">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <div class="cs-box">
+                    <picture class="cs-wrapper">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/concrete.svg" alt="icon" width="70" height="70">
+                    </picture>
+                    <h3 class="cs-h3">Surface Cleaning</h3>
+                    <p class="cs-item-text">Make your driveway and walkways shine again. Our powerful cleaning methods remove tough stains and restore your concrete surfaces.</p>
+                    <a href="/commercial" class="cs-link">Read More</a>
+                </div>
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/surface-service.webp" | resize({width: 343, height: 250}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/surface-service.webp" | resize({width: 345, height: 428}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/surface-service.webp" | resize({width: 345, height: 428}) %}" alt="Pressure washing commercial parking lot">
+                </picture>
+            </li>
+            <li class="cs-item">
+                <div class="cs-box">
+                    <picture class="cs-wrapper">
+                        <img class="cs-icon" aria-hidden="true" loading="lazy" decoding="async" src="/assets/svgs/window.svg" alt="icon" width="70" height="70">
+                    </picture>
+                    <h3 class="cs-h3">Windows</h3>
+                    <p class="cs-item-text">Enjoy streak-free windows with our professional cleaning services. Experience crystal-clear views and let natural light flood your home.</p>
+                    <a href="/commercial" class="cs-link">Read More</a>
+                </div>
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/window-service.webp" | resize({width: 343, height: 250}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/window-service.webp" | resize({width: 345, height: 428}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/window-service.webp" | resize({width: 345, height: 428}) %}" alt="Cleaning storefront windows">
+                </picture>
+            </li>
+        </ul>
+    </div>
+</section>
+                                
+<!-- ============================================ -->
+<!--                Meet The Team                 -->
+<!-- ============================================ -->
+
+<section id="meet-team-1141">
+    <div class="cs-container">
+        <div class="cs-content">
+            <div class="cs-flex">
+                <span class="cs-topper"><span class="cs-accent">About Us.</span></span>
+                <h2 class="cs-title">Peak Pressure Wash</h2>
+                <p class="cs-text">With years of experience in home repair, construction, and exterior cleaning, Peak Pressure Wash offers a full suite of pressure washing services tailored to both residential and commercial properties. What began as a complementary service for deck building, fence construction and house painting has now become our sole focus—keeping your property in pristine condition.
+                <br>
+                <br>
+                We offer customizable cleaning schedules—weekly, monthly, or quarterly—to keep your property looking spotless year-round. Our mission is to build long-term relationships with our clients by providing top-quality services that you can rely on.
+                </p>
+            </div>
+            <span class="cs-topper">Have a Question?</span>
+            <span class="cs-topper">Give us a call at <span class="cs-accent">1 (901) 652-3925</span></span>
+            <a href="/contact" class="cs-button-solid">Contact</a>
+        </div>
+        <ul class="cs-card-group">
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <!--Mobile Image-->
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/cameron-family-1.webp" | resize({width: 343, height: 425}) | webp %}">
+                    <!--Tablet and above Image-->
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/cameron-family-1.webp" | resize({width: 608, height: 407, position: "attention"}) | webp %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/cameron-family-1.webp" | resize({width: 608, height: 407, position: "attention"}) | webp %}" alt="Cameron Shatswell and his wife">
+                </picture>
+                <div class="cs-info">
+                    <span class="cs-name">Cameron Shatswell</span>
+                    <span class="cs-job">Owner / Operator</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="RPsbs-313">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/roof-before.webp" | resize({width: 282, height: 314}) | webp %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/roof-before.webp" | resize({width: 522, height: 581, position: "attention" }) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/roof-before.webp" | resize({width: 522, height: 581, position: "attention" }) | webp %}" alt="Dirty roof before pressure washing" aria-hidden="true">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/roof-after.webp" | resize({width: 214, height: 206}) %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/roof-after.webp" | resize({width: 390, height: 376}) %}">
+                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/roof-after.webp" | resize({width: 390, height: 376}) %}" alt="Clean roof after pressure washing" aria-hidden="true">
+            </picture>
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <h2 class="cs-title">Residential Services</h2>
+            <p class="cs-text">
+                High-quality service shouldn’t break the bank. At Peak Pressure Wash, we offer affordable exterior cleaning solutions for your home. Our services are designed to improve your home’s appearance and protect it from long-term damage, all at competitive prices.
+            </p>
+            <a href="/residential" class="cs-button-solid">View Services</a>
+        </div>
+    </div>
+</section>
+                                
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="RPsbsr-313">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/window-after.webp" | resize({width: 282, height: 314}) | webp %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/window-after.webp" | resize({width: 522, height: 581}) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/window-after.webp" | resize({width: 522, height: 581}) | webp %}" alt="Cleaning commercial storefront windows" aria-hidden="true">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/window-before.webp" | resize({width: 214, height: 206}) | webp %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/window-before.webp" | resize({width: 390, height: 376}) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/window-before.webp" | resize({width: 390, height: 376}) | webp %}" alt="Cleaning commercial storefront windows" width="414" height="400" aria-hidden="true">
+            </picture>
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <h2 class="cs-title">Commercial Services</h2>
+            <p class="cs-text">
+                Your business’s appearance is crucial in making a strong first impression. Our commercial cleaning services ensure your property looks professional and inviting. We specialize in maintaining storefronts, office buildings, and commercial complexes, with tailored cleaning solutions to fit your needs.
+            </p>
+            <a href="/commercial" class="cs-button-solid">View Services</a>
+        </div>
+    </div>
+</section>
+                               
+<!-- ============================================ -->
+<!--                   Gallery                    -->
+<!-- ============================================ -->
+
+<section id="gallery-45">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Gallery</span>
+            <h2 class="cs-title">Our Work</h2>
+            <p class="cs-text">
+                <p class="cs-text">
+                    Discover our pressure washing transformations across Memphis, Germantown, and the Midsouth region. Our before-and-after gallery showcases our expertise in residential and commercial pressure washing, including house washing, roof cleaning, concrete cleaning, and more. See why homeowners and businesses throughout the Midsouth trust Peak Pressure Wash for their exterior cleaning needs.
+                </p>
+            </p>
+        </div>
+        <ul class="cs-image-group">
+            <!-- Image 1 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/siding-before.webp" | resize({width: 343, height: 343}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/siding-before.webp" | resize({width: 305, height: 305}) %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/siding-before.webp" | resize({width: 305, height: 305}) %}" alt="Dirty bricks before pressure washing">
+                </picture>
+            </li>
+            <!-- Image 2 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/siding-after.webp" | resize({width: 343, height: 343}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/siding-after.webp" | resize({width: 305, height: 305}) %}">
+                    <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/siding-after.webp" | resize({width: 305, height: 305}) %}" alt="Clean bricks after pressure washing" width="346" height="346">
+                </picture>
+            </li>
+            <!-- Image 3 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/drive-before.webp" | resize({width: 343, height: 343}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/drive-before.webp" | resize({width: 305, height: 305}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/drive-before.webp" | resize({width: 305, height: 305}) %}" alt="Dirty driveway before pressure washing">
+                </picture>
+            </li>
+            <!-- Image 4 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/drive-after.webp" | resize({width: 343, height: 343}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/drive-after.webp" | resize({width: 305, height: 305}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/drive-after.webp" | resize({width: 305, height: 305}) %}" alt="Clean driveway after pressure washing">
+                </picture>
+            </li>
+            <!-- Image 5 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/patio-before.webp" | resize({width: 343, height: 343}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/patio-before.webp" | resize({width: 305, height: 305}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/patio-before.webp" | resize({width: 305, height: 305}) %}" alt="Dirty patio before pressure washing" width="346" height="346">
+                </picture>
+            </li>
+            <!-- Image 6 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/patio-after.webp" | resize({width: 343, height: 343}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/patio-after.webp" | resize({width: 305, height: 305}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/patio-after.webp" | resize({width: 305, height: 305}) %}" alt="Clean patio before pressure washing" width="346" height="346">
+                </picture>
+            </li>
+            <!-- Image 7 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/pergola-before.webp" | resize({width: 343, height: 343}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/pergola-before.webp" | resize({width: 305, height: 305}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/pergola-before.webp" | resize({width: 305, height: 305}) %}" alt="Dirty pergola before pressure washing">
+                </picture>
+            </li>
+            <!-- Image 8 -->
+            <li class="cs-item">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/pergola-after.webp" | resize({width: 343, height: 343}) %}">
+                    <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/pergola-after.webp" | resize({width: 305, height: 305}) %}">
+                    <img aria-hidden="true" loading="lazy" decoding="async" src="{% getUrl "/assets/images/pergola-after.webp" | resize({width: 305, height: 305}) %}" alt="Clean pergola after pressure washing">
+                </picture>
+            </li>
+        </ul>
+        <a href="https://www.facebook.com/profile.php?id=61564447265756" target="_blank" class="cs-button-solid">Check us out on Facebook!</a>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                   Reviews                    -->
+<!-- ============================================ -->
+
+<section id="reviews-497">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Customer Experience</span>
+            <h2 class="cs-title">Our <span class="cs-accent">Work</span> Speaks for Itself</h2>
+            <p class="cs-text">
+                Reach out today to learn more!
+            </p>
+            <a href="/contact" class="cs-button-solid">Contact Us</a>
+        </div>
+        <div class="cs-review">
+            <p class="cs-review-text">
+                Peak Pressure Wash did an amazing job pressure washing our driveway and garage. We also had our windows cleaned inside and out and they look fantastic. Very professional and affordable.            </p>
+            <img class="cs-profile" aria-hidden="true" loading="lazy" decoding="async" src="/assets/images/kim-belknap.jpg" alt="profile picture" width="60" height="60">
+            <div class="cs-info">
+                <span class="cs-name">Kim Belknap</span>
+                <span class="cs-location">August 21, 2024</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--                    FAQ                       -->
+<!-- ============================================ -->
+
+<section id="faq-1346">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Asked Questions</span>
+            <h2 class="cs-title">Frequently Asked Questions</h2>
+            <p class="cs-text">
+                Have questions about pressure washing services near you? Explore our most frequently asked questions below to find the answers you need.
+            </p>
+        </div>
+        <div class="cs-flex-group">
+            <div class="cs-button-group">
+                <!--If you need to add another button, make sure to copy and paste from one of the buttons here and increment the data-filter value, so the next one would be data-filter="four", and so on-->
+                <button class="cs-option" data-filter="one">
+                    Residential
+                </button>
+                <button class="cs-option" data-filter="two">
+                    Commercial
+                </button>
+            </div>
+            <!--We need this wrapper so the absolutely positioned FAQ lists can be positioned to the top of it to so the animations don't amke it overlap the buttons group above it. We needed a wrapper div around it for the faq lists to be relatively positioned to in order to get the effect we wanted-->
+            <div class="cs-wrapper">
+                <!--If you add more FAQ's, copy and paste of of the .cs-faq-grop lists and increment the data-category to the next number. We have three right now, if you added a fourth you'd change it to data-category="four" to correspond to the new button you created in the .cs-button-group. The filter and category data attributes need to match so they can work together-->
+                <ul class="cs-faq-group" data-category="one">
+                    <!-- Active class added as default -->
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can I schedule a residential pressure washing service near me?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            You can easily schedule a service by contacting us through our website's <a href="/quote" target="_blank">contact form</a> or by calling us directly. We offer flexible scheduling to accommodate your needs. 
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                What residential pressure washing services do you offer?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            We provide comprehensive residential pressure washing services, including house washing, roof cleaning, driveway and walkway cleaning, deck and patio cleaning, and window cleaning. Our goal is to keep your home looking its best year-round.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How often should I have my home's exterior pressure washed?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            It's recommended to pressure wash your home's exterior at least once a year to maintain its appearance and prevent the buildup of dirt, mold, and mildew. However, factors like local climate and environmental conditions may necessitate more frequent cleanings.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                Is pressure washing safe for my home's siding and roof?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Yes, our team uses appropriate pressure settings and techniques to safely clean various siding materials and roofing types without causing damage. We assess each surface to ensure effective and safe cleaning. 
+                        </p>
+                    </li>
+                </ul>
+                <ul class="cs-faq-group cs-hidden" data-category="two">
+                    <!-- Active class added as default -->
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How do I get a quote for commercial pressure washing services near me?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            You can request a free, no-obligation quote by filling out our online <a href="/quote" target="_blank">contact form</a> or by calling us directly. We'll assess your property's needs and provide a customized proposal.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                What types of commercial properties do you service?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            We cater to a wide range of commercial properties, including office buildings, retail stores, restaurants, warehouses, and more. Our services are tailored to meet the specific needs of each business.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                How can regular pressure washing benefit my business?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Regular pressure washing enhances your property's curb appeal, creates a welcoming environment for customers, and helps maintain the structural integrity of your building by removing harmful substances like mold and mildew.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                Do you offer after-hours commercial pressure washing to avoid business disruption?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            Yes, we provide flexible scheduling, including before and after-hours services, to ensure minimal disruption to your business operations.
+                        </p>
+                    </li>
+                    <li class="cs-faq-item">
+                        <button class="cs-button">
+                            <span class="cs-button-text">
+                                Are your commercial pressure washing services compliant with local regulations?
+                            </span>
+                        </button>
+                        <p class="cs-item-p">
+                            We adhere to all local regulations and environmental guidelines, ensuring that our cleaning practices are safe and compliant with industry standards.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+                                
+                                
+
+    {% include 'components/cta.html' %}
+{% endblock %}
+---
 title: 'Midsouth Pressure Washing Services | Peak Pressure Wash | Midsouth, USA'
 description: "Transform your property with Peak Pressure Wash, delivering expert exterior cleaning throughout Memphis and the Midsouth region. Specializing in residential and commercial pressure washing with guaranteed results. Get $50 off your first service!"
 ogImage: '/assets/images/index-image.webp'
