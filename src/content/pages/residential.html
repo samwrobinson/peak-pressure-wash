@@ -1,0 +1,168 @@
+---
+title: 'Residential Services | Peak Pressure Wash, Mid-South, USA'
+description: 'Peak Pressure Wash offers residential pressure washing and exterior cleaning in Memphis, TN. House washing, roof cleaning, gutter whitening, and more—contact us today!'
+ogImage: '/assets/images/res-image.webp'
+preloadImg: '/assets/images/res-header.webp'
+permalink: 'residential/'
+eleventyNavigation:
+    key: Project One
+    order: 3100
+    parent: Services
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="60ad330d-974d-4d1c-bb55-25616534cf71"></script>
+    <link rel="stylesheet" href="/assets/css/projects.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/projects.css" />
+    </noscript>
+{% endblock %}                                
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-843">
+    <div class="cs-container">
+        <span class="cs-int-title">Residential Services</span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background" aria-hidden="true">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/res-header.webp' | resize({width: 750, height: 736}) | webp %}">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/res-header.webp' | resize({width: 2018, height: 800}) | webp %}">
+        <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/res-header.webp' | resize({width: 2018, height: 800}) | webp %}" alt="Pressure washed residential home" width="1280" height="568">
+    </picture>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+    </svg>
+</div>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="RPsbs-313">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/res-drive.webp' | resize({width: 628, height: 628}) | webp %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/res-drive.webp' | resize({width: 892, height: 892}) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/res-drive.webp' | resize({width: 892, height: 892}) | webp %}" alt="Residential driveway cleaning" width="522" height="581" aria-hidden="true">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <source media="(max-width: 600px)" srcset="/assets/images/res-roof.webp">
+                <source media="(min-width: 601px)" srcset="/assets/images/res-roof.webp">
+                <img loading="lazy" decoding="async" src="/assets/images/res-roof.webp" alt="Residential roof cleaning" width="414" height="400" aria-hidden="true">
+            </picture>
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <h1 class="cs-title">Residential <span class="cs-accent">Pressure Washing</span> & <span class="cs-accent">Exterior Cleaning</span> Services</h2>
+            <h2>Restore Your Home’s Beauty with Peak Pressure Wash</h2>
+            <p>
+                Your home is one of your most valuable investments, and maintaining its exterior is key to preserving curb appeal and preventing long-term damage. At Peak Pressure Wash, we offer a full range of residential pressure washing and exterior cleaning services designed to keep every surface of your home spotless, safe, and looking brand new.
+            </p>
+            <h3>Our Residential Services Include:</h3>
+            <h4>House Washing</h4>
+            <p>
+                Over time, dirt, mold, and mildew can accumulate on your home’s siding, dulling its appearance and potentially causing damage. Our professional house washing service safely removes grime and buildup, restoring your home’s beauty. Using a low-pressure soft washing technique, we ensure your home’s exterior is cleaned without damaging delicate surfaces like vinyl, wood, or stucco.
+            </p>
+            <h4>Roof Cleaning</h4>
+            <p>
+                Dark streaks, moss, and algae not only make your roof look unsightly but can also shorten its lifespan. Our asphalt shingle roof cleaning service uses a gentle, low-pressure wash to remove harmful contaminants and restore your roof to its original condition—without causing any damage.
+            </p>
+            <h4>Surface Cleaning</h4>
+            <p>
+                Driveways, patios, and walkways are constantly exposed to the elements, leading to dirt, oil stains, and grime buildup. With our powerful concrete cleaning services, we’ll restore these surfaces to their original shine. Whether it’s your driveway, pool deck, sidewalk, pavers, or decorative stone, we use professional-grade equipment to ensure a deep and even clean every time.
+            </p>
+            <a href="/quote" class="cs-button-solid">Get a Quote!</a>
+        </div>
+    </div>
+</section>
+                                
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="RPsbsr-313">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/gutter-dirty.webp' | resize({width: 628, height: 628}) | webp %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/gutter-dirty.webp' | resize({width: 892, height: 892}) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/gutter-dirty.webp' | resize({width: 892, height: 892}) | webp %}" alt="Dirty house gutters" width="522" height="581" aria-hidden="true">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/gutter-clean.webp' | resize({width: 428, height: 412}) | webp %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/gutter-clean.webp' | resize({width: 414, height: 578}) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/gutter-clean.webp' | resize({width: 414, height: 578}) | webp %}" alt="Cleaned house gutters" width="414" height="400" aria-hidden="true">
+            </picture>
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <h4>Window Cleaning</h4>
+            <p>
+                Crystal-clear windows can transform the look of your home. Our professional window cleaning service ensures streak-free, spotless windows that allow more natural light to flood your space. Whether you need exterior window cleaning or inside-and-out service, we guarantee a sparkling result every time.
+            </p>
+            <h4>Gutter Whitening & Cleaning</h4>
+            <p>
+                Clogged gutters can lead to serious issues like water damage, foundation problems, and mold growth. Our gutter cleaning service ensures your gutters function properly by removing leaves, debris, and blockages. We also offer gutter whitening to restore the clean, bright look of your gutter exteriors—improving curb appeal and preventing stains that can lead to long-term discoloration.
+            </p>
+            <a href="/quote" class="cs-button-solid">Get a Quote!</a>
+        </div>
+    </div>
+</section>
+
+<!-- changed section id from 313 - 314 for non-repeat purposes -->
+<section id="RPsbs-314">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/fence-before.webp' | resize({width: 628, height: 628}) | webp %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/fence-before.webp' | resize({width: 892, height: 892}) | webp %}">
+                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/fence-before.webp' | resize({width: 892, height: 892}) | webp %}" alt="Residential driveway cleaning" width="522" height="581" aria-hidden="true">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/fence-after.webp' | resize({width: 428, height: 412}) %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/fence-after.webp' | resize({width: 600, height: 578}) %}">
+                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/fence-after.webp' | resize({width: 600, height: 578}) %}" alt="Residential roof cleaning" width="414" height="400" aria-hidden="true">
+            </picture>
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <h4>Fence & Deck Restoration</h4>
+            <p>
+                Over time, wood fences and decks can become weathered and dull. Our fence and deck cleaning service brings them back to life by removing dirt, mildew, and grime. We also offer staining and sealing services to protect your wood surfaces from UV damage and prolong their lifespan.
+            </p>
+            <h4>Specialty Service for Your Home</h4>
+            <p>
+                In addition to our core services, Peak Pressure Wash offers a variety of specialty services to address the unique needs of your property. Whether you’re dealing with tough rust stains, graffiti, or need a deep clean for your vinyl awnings, we have the solutions.
+            </p>
+            <ul>
+                <li>Rust Stain Treatment</li>
+                <li>Efflorescence Treatment</li>
+                <li>Vinyl Awning Cleaning</li>
+                <li>Graffiti Removal</li>
+                <li>Concrete Staining, Sealing, and Texturing </li>
+            </ul>
+            <h4>Service Area</h4>
+            <p>Mid-South, USA: Senatobia, Coldwater, Indepenence, Batesville, Como, Hernando, Olive Branch, Horn Lake, Germantown, Collierville</p>
+            <a href="/quote" class="cs-button-solid">Get a Quote!</a>
+        </div>
+    </div>
+</section>
+                                
+
+    {% include 'components/cta.html' %}
+
+{% endblock %}

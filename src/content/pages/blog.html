@@ -1,0 +1,94 @@
+---
+title: 'Blog | Peak Pressure Wash, Midsouth MS'
+description: 'Meta description for the page'
+preloadImg: '/assets/images/cabinets2.jpg'
+permalink: 'blog/'
+eleventyNavigation:
+    key: Blog
+    order: 500
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="60ad330d-974d-4d1c-bb55-25616534cf71"></script>
+
+    <link rel="stylesheet" href="/assets/css/blog.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/blog.css" />
+    </noscript>
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+    <!--                    LANDING                   -->
+    <!-- ============================================ -->
+
+    <section id="int-hero">
+        <h1 id="home-h">Blog</h1>
+        <picture>
+            <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/hero-image-v2.webp" | resize({width: 750, height: 400}) | webp %}">
+            <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/hero-image-v2.webp" | resize({width: 2000, height: 910}) | webp %}">
+            <img aria-hidden="true" decoding="async" src="{% getUrl "/assets/images/hero-image-v2.webp" | resize({width: 2000, height: 910}) | webp %}" alt="Pressuring washing roof" loading="eager">
+        </picture>
+    </section>
+
+    <!-- ============================================ -->
+    <!--              Main Blog Content               -->
+    <!-- ============================================ -->
+
+    <div class="blog-container main-content-wrapper">
+        <!--Main content -->
+        <div class="main-content">
+            <!-- ============================================ -->
+            <!--                 Blog Articles                -->
+            <!-- ============================================ -->
+
+            {% if collections.post | length == 0 %}
+                <h1>No Recent Posts</h1>
+            {% else %}
+                {%- for post in collections.post | reverse -%}
+                    <article class="recent-articles">
+                        <!--Main Article Image-->
+                        <picture class="blog-mainImage">
+                            <img
+                            src="{{ post.data.image }}"
+                            alt="{{ post.data.imageAlt }}"
+                            width="795"
+                            height="400"
+                            decoding="async"/>
+                        </picture>
+                        <!--Article Info-->
+                        <div class="article-group">
+                            <div class="blog-authorGroup">
+                                <!--Author Image-->
+                                <picture class="blog-author-img">
+                                    <img
+                                    src="/assets/svgs/profile.svg"
+                                    alt="house"
+                                    width="32"
+                                    height="32"
+                                    decoding="async"/>
+                                </picture>
+                                <span class="blog-author">{{ post.data.author }}</span>
+                                <span aria-hidden="true" class="blog-dot"></span>
+                                <!--Blog Date-->
+                                <span class="blog-date">{{ post.date | postDate }}</span>
+                            </div>
+                            <h2 class="blog-h1">
+                                {{ post.data.title }}
+                            </h2>
+                            <p class="blog-desc">
+                                {{ post.data.description }}
+                            </p>
+                            <a href="{{ post.url }}" class="blog-link">Continue Reading</a>
+                        </div>
+                    </article>
+                {%- endfor -%}
+            {% endif %}
+        </div>
+
+        {% include 'components/featured-post.html' %}
+    </div>
+{% endblock %}

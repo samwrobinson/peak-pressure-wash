@@ -1,0 +1,145 @@
+---
+title: 'Commercial Services | Peak Pressure Wash, Mid-South, USA'
+description: 'Peak Pressure Wash offers commercial pressure washing and exterior cleaning in Memphis, TN. House washing, roof cleaning, gutter whitening, and more—contact us today!'
+ogImage: '/assets/images/comm-image.webp'
+preloadImg: '/assets/images/res-header.webp'
+permalink: 'commercial/'
+eleventyNavigation:
+    key: Commercial Services
+    order: 3200
+    parent: Services
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="60ad330d-974d-4d1c-bb55-25616534cf71"></script>
+
+    <link rel="stylesheet" href="/assets/css/projects.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript>
+        <link rel="stylesheet" href="/assets/css/projects.css" />
+    </noscript>
+{% endblock %}
+
+{% block body %}
+
+<!-- ============================================ -->
+<!--                   Banner                     -->
+<!-- ============================================ -->
+
+<div id="banner-843">
+    <div class="cs-container">
+        <span class="cs-int-title">Commercial Services</span>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background" aria-hidden="true">
+        <!--Mobile Image-->
+        <source media="(max-width: 600px)" srcset="/assets/images/res-header.webp">
+        <!--Tablet and above Image-->
+        <source media="(min-width: 601px)" srcset="/assets/images/res-header.webp">
+        <img loading="lazy" decoding="async" src="/assets/images/res-header.webp" alt="Pressure washed residential Home" width="1280" height="568">
+    </picture>
+    <!--Change the svg path fill color to whatever color the section below is so you can match it and create the illusion it is all one piece-->
+    <svg class="cs-wave" width="1920" height="179" viewBox="0 0 1920 179" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1920 179V91.3463C1835.33 91.3463 1715.47 76.615 1549.2 32.9521C1299.48 -32.3214 1132.77 12.1006 947.32 61.5167C810.762 97.9044 664.042 137 466.533 137C331.607 137 256.468 123.447 188.082 111.113C130.974 100.812 78.5746 91.3609 0 91.3609V179H1920Z" fill="white"/>
+    </svg>
+</div>
+
+<!-- ============================================ -->
+<!--                 Side By Side                 -->
+<!-- ============================================ -->
+
+<section id="RPsbs-313">
+    <div class="cs-container">
+        <!-- Left Image Section -->
+        <div class="cs-image-group">
+            <picture class="cs-picture cs-picture1">
+                <source media="(max-width: 600px)" srcset="/assets/images/cleaning-trash.webp">
+                <source media="(min-width: 601px)" srcset="/assets/images/cleaning-trash.webp">
+                <img loading="lazy" decoding="async" src="/assets/images/cleaning-trash.webp" alt="Pressure washing restaurant trash can" width="522" height="581" aria-hidden="true">
+            </picture>
+            <picture class="cs-picture cs-picture2">
+                <source media="(max-width: 600px)" srcset="/assets/images/cleaning-windows.webp">
+                <source media="(min-width: 601px)" srcset="/assets/images/cleaning-windows.webp">
+                <img loading="lazy" decoding="async" src="/assets/images/cleaning-windows.webp" alt="Cleaning commercial windows" width="414" height="400" aria-hidden="true">
+            </picture>
+        </div>
+        <!-- Right Content Section-->
+        <div class="cs-content">
+            <h1 class="cs-title">Commercial <span class="cs-accent">Pressure Washing</span> & <span class="cs-accent">Exterior Cleaning</span> Services</h2>
+            <h2>Professional Exterior Cleaning for Your Business</h2>
+            <p>
+                Maintaining a clean and inviting appearance is essential for any business. At Peak Pressure Wash, we specialize in commercial pressure washing and exterior cleaning services that enhance your property’s appearance and ensure it’s safe and welcoming for employees, customers, and visitors alike.
+            </p>
+            <p>
+                We understand that every business has unique needs. That’s why we offer customized maintenance plans for our commercial clients. Whether it’s regular cleaning for your building, parking lot, or windows, we’ll create a schedule that fits your business and keeps your property looking its best all year long.
+            </p>
+            <h3>Our Commercial Services Include:</h3>
+            <h4>Storefront Window Washing Routes</h4>
+            <p>
+                For businesses that rely on consistently clean windows, we offer storefront window washing routes across multiple cities. Whether it’s weekly, monthly, or quarterly service, our professional window cleaning will keep your storefront looking its best.            
+            </p>
+            <h4>Building Exterior Cleaning</h4>
+            <p>
+                Your building’s exterior is the first impression your clients and customers get, and it should always look its best. Our building exterior cleaning service safely removes dirt, grime, mold, and algae from your building’s facade, leaving it fresh and inviting.
+            </p>
+            <h4>Drive-Through Restaurant Cleaning</h4>
+            <p>
+                Maintain a clean and welcoming drive-through with our professional cleaning services. We remove grease, stains, and buildup from lanes and concrete surfaces, ensuring a safe and inviting experience for your customers.
+            </p>
+            <h4>Concrete Cleaning (Sidewalks, Parking Lots, Entryways)</h4>
+            <p>
+                High-traffic areas like sidewalks, entryways, and parking lots are prone to dirt, oil, and grime buildup. Our powerful concrete cleaning service removes these stains to provide a clean, safe, and attractive environment for your customers and employees. We also offer pressure washing services with the addition of degreaser for tough stains and grease.
+            </p>
+            <a href="/quote" class="cs-button-solid">Get a Quote!</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============================================ -->
+<!--             Side By Side Reverse             -->
+<!-- ============================================ -->
+
+<section id="sbsr-1363">
+    <div class="cs-container">
+        <div class="cs-image-group">
+            <picture class="cs-background">
+                <!--Mobile Image-->
+                <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/gas-station.webp' | resize({width: 686, height: 1040}) | avif %}">
+                <!--Tablet and above Image-->
+                <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/gas-station.webp' | resize({width: 1172, height: 1920}) | avif %}">
+                <img loading="lazy" decoding="async" src="{% getUrl '/assets/images/gas-station.webp' | resize({width: 1172, height: 1920}) | avif %}" alt="Pressure Washed Gas Station" width="605868" height="690">
+            </picture>
+        </div>
+        <div class="cs-content">
+            <div class="cs-content">
+                <h4>Graffiti Removal</h4>
+                <p>
+                    Unwanted graffiti can tarnish your business’s image. At Peak Pressure Wash, we offer fast and effective graffiti removal, restoring your building’s exterior to its original condition without damaging the underlying surface.                </p>
+                <h4>Gas Station Cleaning</h4>
+                <p>
+                    Keep your gas station clean and safe with our professional cleaning services. From diesel spill cleanup to removing oil stains and grime, our team ensures that pumps, concrete surfaces, and high-traffic areas stay spotless and inviting.                </p>
+                <h4>Dumpster Cleaning</h4>
+                <p>
+                    Areas like dumpsters are often overlooked but play a crucial role in maintaining a clean, hygienic business environment. Our dumpster cleaning service remove grease, stains, and odors to keep these areas clean and safe for employees and customers.                </p>
+                <h4>Parking Garage Cleaning</h4>
+                <p>
+                    Parking garages endure heavy foot and vehicle traffic, leading to oil stains, dirt, and debris buildup. Our parking garage cleaning services remove these contaminants using professional-grade equipment to ensure a safe and clean environment for drivers and pedestrians.                </p>
+                <h4>Get Your Free Commercial Pressure Washing Quote Today!</h4>
+                <p>
+                    Enhance the look and safety of your commercial property with professional pressure washing services from Peak Pressure Wash. Whether you need regular maintenance or a one-time deep clean, we’re here to help your business shine. Contact us today for a free consultation and find out how we can make a difference for your property.
+                </p>
+                <h4>Service Area</h4>
+                <p>Mid-South, USA: Senatobia, Coldwater, Indepenence, Batesville, Como, Hernando, Olive Branch, Horn Lake, Germantown, Collierville</p>
+                <a href="/quote" class="cs-button-solid">Get a Quote!</a>
+        </div>
+    </div>
+</section>
+
+
+    {% include 'components/cta.html' %}
+
+{% endblock %}
+
+                                

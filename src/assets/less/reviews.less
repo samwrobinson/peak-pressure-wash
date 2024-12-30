@@ -1,0 +1,306 @@
+/*-- -------------------------- -->
+<---          Banner            -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #ContactBanner-327 {
+        /* 144px - 252px */
+        padding-top: clamp(9rem, 25vw, 15.75rem);
+        /* 80px - 140px */
+        padding-bottom: clamp(5rem, 13vw, 8.75rem);
+        position: relative;
+        z-index: 1;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .cs-int-title {
+            /* 39px - 49px */
+            font-size: clamp(2.4375rem, 4.5vw, 3.0625rem);
+            font-weight: 900;
+            line-height: 1.2em;
+            text-align: center;
+            max-width: (700/16rem);
+            margin: 0 auto (12/16rem);
+            color: var(--bodyTextColorWhite);
+            position: relative;
+        }
+
+        .cs-breadcrumbs {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .cs-link {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.2em;
+            text-decoration: none;
+            color: var(--bodyTextColorWhite);
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:last-of-type {
+                /* remove the chevron on the last list item */
+                &::after {
+                    display: none;
+                }
+            }
+
+            &:after {
+                /* chevron - added as pseudo to make adding and removing them easier */
+                content: "";
+                width: (7/16rem);
+                height: (12/16rem);
+                margin-left: (12/16rem);
+                margin-right: (12/16rem);
+                background: url("https://csimg.nyc3.digitaloceanspaces.com/Banners/chevron-right.svg");
+                background-size: contain;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+
+            &.cs-active {
+                color: var(--primaryLight);
+            }
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+            z-index: -1;
+
+            &:before {
+                /* black overlay box */
+                content: "";
+                width: 100%;
+                height: 100%;
+                background: #000;
+                opacity: 0.72;
+                position: absolute;
+                display: block;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #reviews-567 {
+        padding: var(--sectionPadding);
+
+        .cs-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: (550/16rem);
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+
+        .cs-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            max-width: (522/16rem);
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .cs-card-group {
+            width: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* 16px - 20px */
+            gap: clamp(1rem, 2.5vw, 1.15rem);
+        }
+
+        .cs-item {
+            list-style: none;
+            font-family: 'Nunito', sans-serif;
+            width: 100%;
+            max-width: (630/16rem);
+            /* 32px - 60px top & bottom */
+            /* 16px - 48px left & right */
+            padding: clamp(2rem, 6.15vw, 3.75rem) clamp(1rem, 4.15vw, 3rem);
+            background-color: #f1f1f4;
+            /* prevents padding from adding to height and width */
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            position: relative;
+            border-radius: 15px;
+        }
+
+        .cs-stars {
+            /* 169px - 189px */
+            width: clamp(10.5625rem, 20vw, 11.8125rem);
+            height: auto;
+            /* 20px - 24px */
+            margin-bottom: clamp(1.25rem, 3vw, 1.5rem);
+            display: block;
+        }
+
+        .cs-item-text {
+            /* 14px - 16px */
+            font-size: clamp(0.875rem, 1.5vw, 1rem);
+            line-height: 1.5em;
+            margin: 0;
+            /* 40px - 64px */
+            margin-bottom: clamp(2.5rem, 8vw, 4rem);
+            color: var(--bodyTextColor);
+        }
+
+        .cs-flex-group {
+            /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+            margin-top: auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: (20/16rem);
+        }
+
+        .cs-profile {
+            width: (80/16rem);
+            height: (80/16rem);
+            border-radius: 50%;
+            /* clips image corners to make circle */
+            overflow: hidden;
+            position: relative;
+            display: block;
+
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                /* makes the image behave like a background image */
+                object-fit: cover;
+            }
+        }
+
+        .cs-name {
+            /* 16px - 20px */
+            font-size: clamp(1rem, 2vw, 1.25rem);
+            line-height: 1.5em;
+            font-weight: 700;
+            margin: 0 0 (8/16rem) 0;
+            color: var(--headerColor);
+            display: block;
+        }
+
+        .cs-job {
+            /* 13px - 16px */
+            font-size: clamp(0.8125rem, 1.6vw, 1rem);
+            line-height: 1.2em;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0.01em;
+            margin: 0;
+            color: var(--bodyTextColor);
+            display: block;
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #reviews-567 {
+        .cs-container {
+            max-width: (1280/16rem);
+        }
+
+        .cs-card-group {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+            flex-wrap: wrap;
+        }
+
+        .cs-item {
+            width: clamp(48.5%, 46.5vw, 49.5%);
+            transition: transform 150ms ease-in-out;
+            &:last-of-type {
+                width: 100%;
+                max-width: 100%;
+                align-items: center;
+
+                .cs-item-text {
+                    text-align: center;
+                    max-width: (550/16rem);
+                }
+            }
+        }
+    }
+}
+
+/* Desktop - 1200px */
+@media only screen and (min-width: 75rem) {
+    #reviews-567 {
+        .cs-card-group {
+            flex-wrap: nowrap;
+        }
+
+        .cs-item {
+            width: 100%;
+            align-items: flex-start;
+            &:last-of-type {
+                align-items: flex-start;
+
+                .cs-item-text {
+                    text-align: left;
+                }
+            }
+        }
+
+        .cs-item:hover {
+            transform: translateY(-15px);
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+    }
+}
+
+                                

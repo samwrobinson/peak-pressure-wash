@@ -1,0 +1,219 @@
+/*-- -------------------------- -->
+<---           Hero             -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #hero-331 {
+    /* Centers button */
+    text-align: center;
+    /* changes on tablet */
+    padding: clamp(9rem, 25.95vw, 17.5rem) 1rem;
+    /* 150px - 250px */
+    padding-bottom: clamp(9.375rem, 30.5vw, 15.625rem);
+    position: relative;
+    z-index: 1;
+    /* prevents overflow from the lines extending past the screen width */
+    overflow: hidden;
+  }
+  #hero-331 .cs-background {
+    /* Background Image */
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+  }
+  #hero-331 .cs-background:before {
+    /* White Color Overlay */
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.25) 25%, rgba(255, 255, 255, 0.65) 50%, rgba(255, 255, 255, 0.75) 80%, rgba(255, 255, 255, 0.85) 100%);
+    opacity: 0.85;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* prevents the cursor from interacting with it */
+    pointer-events: none;
+  }
+  #hero-331 .cs-background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    /* Makes image act like a background-image */
+    object-fit: cover;
+    /* places the top of the image at the top of the parent */
+    object-position: top;
+  }
+  #hero-331 .cs-container {
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    position: relative;
+  }
+  #hero-331 .cs-flex-group {
+    /* 456px - 626px */
+    max-width: clamp(28.5rem, 62vw, 39.125rem);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+  }
+  #hero-331 .cs-title {
+    /* 39px - 61px */
+    font-size: clamp(2.4375rem, 6.4vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2em;
+    text-align: left;
+    width: 100%;
+    margin: 0 auto 1rem;
+    color: var(--headerColor);
+    position: relative;
+  }
+  #hero-331 .cs-accent {
+    color: var(--primary);
+  }
+  #hero-331 .cs-text {
+    /* 16px - 20px */
+    font-size: clamp(1rem, 1.95vw, 1.25rem);
+    line-height: 1.5em;
+    text-align: left;
+    width: 100%;
+    max-width: 27.625rem;
+    /* 32px - 40px */
+    margin: 0 auto clamp(2rem, 4vw, 2.5rem) 0;
+    /* 24px - 40px */
+    margin-bottom: clamp(0.5rem, 2vw, 1rem);
+    color: var(--bodyTextColor);
+  }
+  #hero-331 .cs-button-group {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  #hero-331 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875em, 5.5vw, 3.5em);
+    width: 11.25rem;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 0.5rem;
+    /* clips corners of the before element */
+    overflow: hidden;
+    margin: 0;
+    color: var(--primaryLight);
+    padding: 0;
+    background-color: var(--button-color);
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-331 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: var(--primaryLight);
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width 0.3s;
+  }
+  #hero-331 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+  #hero-331 .cs-button-solid:hover {
+    color: var(--button-color);
+    transition: color 200ms ease;
+  }
+  #hero-331 .cs-button-transparent {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    width: 11.25rem;
+    /* 46px - 56px */
+    height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    margin: 0;
+    color: var(--primary);
+    padding: 0;
+    background-color: transparent;
+    box-sizing: border-box;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  #hero-331 .cs-button-transparent:before {
+    /* white hover box */
+    content: "";
+    /* 46px - 56px */
+    width: clamp(2.875rem, 5.5vw, 3.5rem);
+    background: #fff;
+    border-radius: 1.75rem;
+    opacity: 1;
+    position: absolute;
+    display: block;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    z-index: -1;
+    transition: width 0.3s, box-shadow 0.3s;
+  }
+  #hero-331 .cs-button-transparent:hover:before {
+    width: 100%;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  }
+  #hero-331 .cs-picture {
+    /* 46px - 56px */
+    width: clamp(2.875rem, 5.5vw, 3.5rem);
+    height: clamp(2.875rem, 5.5vw, 3.5rem);
+    margin-right: 0.5rem;
+    background-color: var(--primary);
+    border-radius: 50%;
+    border: 6px solid #fff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #hero-331 .cs-image {
+    width: 0.75rem;
+    height: auto;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #hero-331 .cs-background:before {
+    width: 80%;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.25) 25%, rgba(255, 255, 255, 0.65) 50%, rgba(255, 255, 255, 0.75) 80%, rgba(255, 255, 255, 0.85) 100%);
+    opacity: 1;
+  }
+  #hero-331 .cs-flex-group {
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 2rem;
+    margin-left: 3rem;
+  }
+}
+/* Desktop */
+@media only screen and (min-width: 64rem) {
+  #hero-331 .cs-flex-group {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,32 @@
+<!-- ============================================ -->
+<!--                    CTA                       -->
+<!-- ============================================ -->
+
+<section id="cta-384">
+    <div class="cs-container">
+        <div class="cs-content">
+            <span class="cs-topper">Why wait?</span>
+            <h2 class="cs-title">Reach out today!</h2>
+            <p class="cs-text">
+                Schedule your free consultation now and see how Peak Pressure Wash 
+                can enhance your property’s curb appeal.
+            </p>
+            <a href="/quote" class="cs-button-solid">Get A Quote</a>
+        </div>
+        <div class="cs-image-group">
+            <!--Bucket Image-->
+            <picture class="cs-bucket">
+                <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/peak-logo-m.webp" | resize({width: 400, height: 260}) | webp({quality: 20}) %}">
+                <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/peak-logo-m.webp" | resize({width: 640, height: 400}) | webp({quality: 20}) %}">
+                <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/peak-logo-m.webp" | resize({width: 640, height: 400}) | webp({quality: 20}) %}" alt="Peak Pressure Wash Logo" width="640" height="400" aria-hidden="true">
+            </picture>
+        </div>
+    </div>
+    <!--Background Image-->
+    <picture class="cs-background">
+        <source media="(max-width: 600px)" srcset="{% getUrl "/assets/images/fabric-m.webp" | webp %}">
+        <source media="(min-width: 601px)" srcset="{% getUrl "/assets/images/fabric.webp" | webp %}">
+        <img loading="lazy" decoding="async" src="{% getUrl "/assets/images/fabric.webp" | webp %}" alt="fabric" width="1920" height="660" aria-hidden="true">
+    </picture>
+</section>
+                                
