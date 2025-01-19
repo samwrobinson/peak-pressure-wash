@@ -6,7 +6,8 @@ preloadImg: '/assets/images/holiday-banner.webp'
 permalink: 'holiday/'
 eleventyNavigation:
     key: Holiday
-    order: 400
+    order: 2300
+    parent: 200
 ---
 
 {% extends "layouts/base.html" %}
@@ -119,12 +120,12 @@ eleventyNavigation:
                     <br><br>
                     If Google Street View has your place covered, you're all set! Otherwise, snap a quick photo of your home, and we’ll whip up a custom mockup of your dazzling Christmas lights. <strong>You’ll see the magic before you even make a commitment</strong>. Reach out today for a stress-free, sparkling holiday display that’ll boost your curb appeal!
                 </p>
-                <a href="/quote" class="cs-button-solid">Quote</a>
+                <a href="/quote/" class="cs-button-solid">Quote</a>
             </div>
         </div>
         <ul class="cs-card-group">
             <li class="cs-item">
-                <a href="/quote" class="cs-link">
+                <a href="/quote/" class="cs-link">
                     <picture class="cs-picture">
                         <source media="(max-width: 600px)"
                         srcset="{% getUrl "/assets/images/street-view-2.webp" | resize({width: 686, height: 640}) | webp %}">
@@ -145,7 +146,7 @@ eleventyNavigation:
                 </a>
             </li>
             <li class="cs-item">
-                <a href="/quote" class="cs-link">
+                <a href="/quote/" class="cs-link">
                     <picture class="cs-picture">
                         <source media="(max-width: 600px)"
                             srcset="{% getUrl "/assets/images/lights-mockup.webp" | resize({width: 686, height: 640}) | webp %}">
@@ -167,7 +168,7 @@ eleventyNavigation:
                 </a>
             </li>
             <li class="cs-item">
-                <a href="/quote" class="cs-link">
+                <a href="/quote/" class="cs-link">
                     <picture class="cs-picture">
                         <source media="(max-width: 600px)"
                             srcset="{% getUrl "/assets/images/city-cheese-cake.webp" | resize({width: 686, height: 640}) | webp %}">
@@ -219,7 +220,7 @@ eleventyNavigation:
                 <p>Looking to brighten up your home this holiday season with your own personal touch? We’ve got you covered! Take advantage of our wholesale pricing on premium Christmas lights. Whether you're decking out your home or business, we can provide the lights you need. Contact us today to make this holiday season shine even brighter!</p>
                 <h4>Service Area</h4>
                 <p>Mid-South, USA: Senatobia, Coldwater, Indepenence, Batesville, Como, Hernando, Olive Branch, Horn Lake, Germantown, Collierville</p>
-                <a href="/quote" class="cs-button-solid">Get a Quote!</a>
+                <a href="/quote/" class="cs-button-solid">Get a Quote!</a>
         </div>
     </div>
 </section>
