@@ -1,8 +1,8 @@
 module.exports = {
     "name": "Peak Pressure Wash",
     "email": "peakpressurewash@outlook.com",
-    "phoneForTel": "901-652-3925",
-    "phoneFormatted": "(901) 652-3925",
+    "phoneForTel": "901-621-3223",
+    "phoneFormatted": "(901) 621-3223",
     "address": {
         "lineOne": "Senatobia",
         "lineTwo": "Second Address Line",
