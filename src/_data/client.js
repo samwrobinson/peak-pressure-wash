@@ -1,5 +1,5 @@
 module.exports = {
-    "name": "Peak Pressure Wash",
+    "name": "Peak Home Improvement",
     "email": "peakpressurewash@outlook.com",
     "phoneForTel": "901-621-3223",
     "phoneFormatted": "(901) 621-3223",
@@ -17,5 +17,5 @@ module.exports = {
         "instagram": "https://www.instagram.com/",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-    "domain": "https://peak-pressurewash.com"
+    "domain": "https://peakhomeimprovement.us"
 };
