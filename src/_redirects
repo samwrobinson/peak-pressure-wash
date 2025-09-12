@@ -1,9 +1,0 @@
-# Force direct redirects without intermediate HTTPS step
-http://peak-pressurewash.com/* https://peakhomeimprovement.us/:splat 301!
-https://peak-pressurewash.com/* https://peakhomeimprovement.us/:splat 301!
-http://www.peak-pressurewash.com/* https://peakhomeimprovement.us/:splat 301!
-https://www.peak-pressurewash.com/* https://peakhomeimprovement.us/:splat 301!
-
-# Catch any remaining automatic HTTPS redirects
-peak-pressurewash.com/* https://peakhomeimprovement.us/:splat 301!
-www.peak-pressurewash.com/* https://peakhomeimprovement.us/:splat 301!

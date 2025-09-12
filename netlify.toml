@@ -20,3 +20,31 @@ package = "netlify-plugin-cache"
     "public/assets/images",
     ".cache"
   ]
+
+# HTTP redirects - these should be processed first
+[[redirects]]
+  from = "http://peak-pressurewash.com/*"
+  to = "https://peakhomeimprovement.us/:splat"
+  status = 301
+  force = true
+  conditions = {Scheme = ["http"]}
+
+[[redirects]]
+  from = "http://www.peak-pressurewash.com/*"
+  to = "https://peakhomeimprovement.us/:splat"
+  status = 301
+  force = true
+  conditions = {Scheme = ["http"]}
+
+# HTTPS redirects
+[[redirects]]
+  from = "https://peak-pressurewash.com/*"
+  to = "https://peakhomeimprovement.us/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://www.peak-pressurewash.com/*"
+  to = "https://peakhomeimprovement.us/:splat"
+  status = 301
+  force = true
